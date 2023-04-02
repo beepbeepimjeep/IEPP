@@ -1,6 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
-const API = 'AIzaSyAFDwaGMDFeSy7crpQzXMYfDU4VhTu7GuU';
+
+
 const urlSearch = async (req,res)=>{
     var domain = req.params.url;
 
@@ -13,7 +14,6 @@ const urlSearch = async (req,res)=>{
             // Handle any errors that occurred during the request
             console.log(error);
         });
-
     res.render('')
 }
 
