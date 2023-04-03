@@ -13,25 +13,43 @@ const connection = mysql.createConnection({
 });
 
 const urlSearch = async (req, res) => {
-    var domain = req.params.url;
-
-    axios.get(`https://webrisk.googleapis.com/v1/uris:search?threatTypes=MALWARE&uri=${domain}&key=${process.env["GOOGLE_LOOKUP_API"]}`)
-        .then(response => {
-            // Handle the response data here
-            console.log(response.data);
-        })
-        .catch(error => {
-            // Handle any errors that occurred during the request
-            console.log(error);
-        });
+    const domain = req.params.url;
 
     connection.connect((err) => {
         if (err) throw err;
         console.log('Connected to MySQL server!');
 
-        connection.query('SELECT * FROM riskType_Article LIMIT 5', (err, results) => {
+        connection.query(`SELECT * FROM collectionURL WHERE urlLink = '${domain}' `, (err, results) => {
+            if (err) throw err;
+            if(results.toString().length==0){
+                connection.query(`SELECT * FROM maliciousURL WHERE urlLink = '${domain}' `, (err, results) => {
+                    if (err) throw err;
+                    if(results.toString().length==0){
+                        axios.get(`https://webrisk.googleapis.com/v1/uris:search?threatTypes=MALWARE&uri=${domain}&key=${process.env["GOOGLE_LOOKUP_API"]}`)
+                            .then(response => {
+                                // Handle the response data here
+                                console.log(response.data);
+                                return {result : response.data};
+                            })
+                            .catch(error => {
+                                // Handle any errors that occurred during the request
+                                console.log(error);
+                            });
+                    }else {
+                        return {result : results};
+                    }
+                });
+            }else {
+                return {result : results};
+            }
+        });
+
+        connection.query(`SELECT * FROM maliciousURL WHERE urlLink = '${domain}' `, (err, results) => {
             if (err) throw err;
             console.log(results);
+            if(results){
+
+            }
         });
 
         // Close the connection when you're done with it
