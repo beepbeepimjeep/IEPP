@@ -5,6 +5,10 @@
 </head>
 <body>
 <p1>Main Page</p1>
-
+<ul>
+  <% result.forEach(function(item) { %>
+    <li><%= item.name %></li>
+  <% }); %>
+</ul>
 </body>
 </html>
