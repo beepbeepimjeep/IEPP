@@ -1,5 +1,6 @@
 require('./model/index');
 const urlSearchRouter = require('./routes/urlSearchRouter');
+const cors = require('cors');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -10,7 +11,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+//enables cors
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -40,8 +42,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(process.env.PORT||3000, () => {
-  console.log('The library app is listening on port 3000!')
+app.listen(process.env.PORT||3080, () => {
+  console.log('The library app is listening on port 3080!')
 });
 
 module.exports = app;

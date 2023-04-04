@@ -38,16 +38,13 @@ const urlSearch = async (req, res) => {
                     return [];
                 })
         ]);
+        console.log(results);
         return results;
     } catch (error) {
         console.log(error);
         throw new Error('Internal server error');
-    } finally {
-        connection.end((err) => {
-            if (err) throw err;
-            console.log('Connection closed!');
-        });
     }
+
 };
 
 module.exports = {
