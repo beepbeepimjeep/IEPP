@@ -21,11 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6c7767cb-38af-4c8e-8d7b-903236bd6a0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/urlController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/urlController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/urlSearchRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/urlSearchRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\IEPP\bin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\WebstormProjects\IEPP\views" />
     </key>
@@ -85,7 +88,9 @@
       <workItem from="1679968700778" duration="1877000" />
       <workItem from="1680168692152" duration="599000" />
       <workItem from="1680170273451" duration="1264000" />
-      <workItem from="1680255214122" duration="31982000" />
+      <workItem from="1680255214122" duration="45610000" />
+      <workItem from="1681369990604" duration="821000" />
+      <workItem from="1681444577989" duration="2597000" />
     </task>
     <servers />
   </component>
@@ -102,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1679969125421">

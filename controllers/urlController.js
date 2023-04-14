@@ -3,17 +3,24 @@ const mysql = require('mysql');
 
 require('dotenv').config();
 
-const connection = mysql.createConnection({
-    host: '34.129.14.82',
-    port: 3306,
-    user: 'root',
-    password: '012ebecbd6b870d3',
-    database: '5120finalproject',
-    connectionTimeout: 3000
-});
+const urlSearch = async (domain) => {
+    const connection = mysql.createPool({
+        host: '34.129.14.82',
+        port: 3306,
+        user: 'root',
+        password: '012ebecbd6b870d3',
+        database: '5120finalproject',
+        connectionLimit: 10,
+        connectionTimeout: 3000
+    });
+    const pattern1 = "http://";
+    const pattern2 = "https://";
+    console.log("line 18 domain = " +domain);
+    domain = domain.replace(pattern1, "");
+    domain = domain.replace(pattern2, "");
 
-const urlSearch = async (req, res) => {
-    const domain = req.params.url;
+    console.log("domain after replace: "+domain);
+
     let sentData;
     try {
         const results = await Promise.all([
@@ -38,13 +45,16 @@ const urlSearch = async (req, res) => {
                     return [];
                 })
         ]);
+        connection.end((err)=>{
+            if(err) throw err;
+            console.log("Line 52, connection pool close")
+        })
         console.log(results);
         return results;
     } catch (error) {
         console.log(error);
         throw new Error('Internal server error');
     }
-
 };
 
 module.exports = {
