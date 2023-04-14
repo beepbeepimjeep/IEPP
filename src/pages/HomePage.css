@@ -1,0 +1,144 @@
+.we-understand-the {
+  margin: 0;
+}
+.at-double-squere,
+.we-are-creative-container {
+  position: relative;
+  line-height: 120%;
+  display: inline-block;
+  width: 664px;
+}
+.at-double-squere {
+  padding-top: 20px;
+  font-size: var(--font-size-base);
+  line-height: 160%;
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--color-white);
+  width: 672px;
+}
+.text,
+.title {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  color: rgba(150, 149, 149, 0.801);
+}
+.title {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.text {
+  position: absolute;
+  top: 245px;
+  left: 159px;
+  width: 672px;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-45xl);
+}
+.label {
+  position: relative;
+  line-height: 18px;
+  cursor: pointer;
+}
+.buttonprimary,
+.buttons1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 25%;
+  /* padding-top: 20%; */
+}
+.buttonprimary {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-mediumseagreen-100);
+  padding: var(--padding-xs) var(--padding-lgi);
+}
+.buttons1,.buttons2 {
+  cursor: pointer;
+  margin-top: 45%;
+}
+.buttonsecondary {
+  border-radius: var(--br-9xs);
+  border: 1px solid var(--color-azure);
+  padding: var(--padding-xs) var(--padding-mid);
+  align-items: flex-start;
+}
+.buttons,
+.buttons2,
+.buttonsecondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.buttons {
+  position: absolute;
+  top: 622px;
+  left: 159px;
+  width: 479px;
+  height: 42.67px;
+  align-items: center;
+  gap: 51px;
+  text-align: center;
+  color: var(--color-white);
+}
+.articles,
+.home,
+.quiz {
+  position: relative;
+  line-height: 100%;
+}
+.home {
+  color: var(--color-gray-300);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.articles,
+.quiz {
+  cursor: pointer;
+}
+.quiz {
+  display: flex;
+  align-items: center;
+  width: 56px;
+  flex-shrink: 0;
+}
+.header {
+  position: absolute;
+  top: 50px;
+  left: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-8xl);
+  color: var(--color-slategray);
+}
+.home-page {
+  /* position: fixed;
+  background-color: var(--color-honeydew);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-midnightblue);
+  font-family: var(--font-abeezee); */
+  background-image: url("../../public/hackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* width: auto; */
+}
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}

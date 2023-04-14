@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-abeezee: ABeeZee;
+  --font-montserrat: Montserrat;
+  --font-poppins: Poppins;
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-45xl: 64px;
+  --font-size-xs: 12px;
+  --font-size-lg: 18px;
+  --font-size-5xl: 24px;
+  --font-size-17xl: 36px;
+  --font-size-3xs-2: 9.2px;
+  --font-size-15xl: 34px;
+
+  /* Colors */
+  --color-honeydew: #e0f0df;
+  --color-slategray: #73779f;
+  --color-gray-100: #fcffff;
+  --color-gray-300: #130f26;
+  --color-azure: #deefec;
+  --color-mediumseagreen-100: #00a578;
+  --color-mediumseagreen-200: rgba(0, 165, 120, 0.05);
+  --color-white: #fff;
+  --color-darkslateblue-100: #282d6c;
+  --color-darkslateblue-200: #262b6a;
+  --color-midnightblue: rgba(3, 8, 82, 0.85);
+  --color-steelblue-100: #656d9f;
+  --color-steelblue-200: #5e6191;
+  --color-lightsteelblue: #9ea1bd;
+  --color-black: #000;
+  --color-dimgray: #696f79;
+  --color-orange: #ffa822;
+  --color-darkslategray-100: #134e6f;
+  --color-whitesmoke-100: #f4f5f8;
+  --color-royalblue: #096dd9;
+
+  /* Gaps */
+  --gap-8xl: 27px;
+  --gap-base: 16px;
+  --gap-28xl: 47px;
+  --gap-21xl: 40px;
+  --gap-11xl: 30px;
+  --gap-3xs: 10px;
+
+  /* Paddings */
+  --padding-xs: 12px;
+  --padding-mid: 17px;
+  --padding-lgi: 19px;
+  --padding-5xs: 8px;
+
+  /* border radiuses */
+  --br-9xs: 4px;
+  --br-xs: 12px;
+  --br-3xs: 10px;
+  --br-7xs: 6px;
+  --br-5xs: 8px;
+}
+
+.navbar {
+  position: absolute;
+}
+.navbar li.active {
+  text-shadow: 0 4px 4px rgba(7, 7, 7, 0.24);
+  color: black; 
+  font-weight: bold;
+}
