@@ -22,10 +22,6 @@
     <list default="true" id="6c7767cb-38af-4c8e-8d7b-903236bd6a0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/urlController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/urlController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/urlSearchRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/urlSearchRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.20.55" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/my-react-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -90,7 +86,8 @@
       <workItem from="1680170273451" duration="1264000" />
       <workItem from="1680255214122" duration="45610000" />
       <workItem from="1681369990604" duration="821000" />
-      <workItem from="1681444577989" duration="2597000" />
+      <workItem from="1681444577989" duration="4580000" />
+      <workItem from="1681479244155" duration="2565000" />
     </task>
     <servers />
   </component>
@@ -118,9 +115,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="298" key="EditFileWatcherDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1679881442796" />
-    <state x="2754" y="343" key="FileChooserDialogImpl" timestamp="1680170334075">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="834" y="343" key="FileChooserDialogImpl" timestamp="1681448729330">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="834" y="343" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1681448729330" />
     <state x="2754" y="343" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1680170334075" />
     <state x="2381" y="165" key="SettingsEditor" timestamp="1680256373414">
       <screen x="1920" y="0" width="1920" height="1040" />
