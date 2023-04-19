@@ -1,0 +1,14 @@
+.navLink {
+    padding-left: 0;
+    padding: 12px 22px;
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    position: relative;
+    color: var(--bs-gray);
+}
+
+.navLink:hover {
+    color: #d91966;
+}
+

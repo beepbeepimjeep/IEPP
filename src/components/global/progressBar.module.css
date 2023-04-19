@@ -1,0 +1,24 @@
+.progressBar {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #d91966;
+    animation-name: fill;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+/* @keyframes fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+} */

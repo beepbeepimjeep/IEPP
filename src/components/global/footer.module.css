@@ -1,0 +1,88 @@
+.footerArea {
+    background: #1a1a1a;
+    padding: 80px 0;
+}
+
+.footerTop {
+    margin-bottom: 80px;
+}
+
+.footerLogo {
+    max-width: 125px;
+}
+
+.footerWidget {
+    padding-right: 60px;
+}
+
+.footerText {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #fafafa;
+}
+
+.footerSocialCollections li a {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #25282b;
+    background-color: #fff;
+}
+
+.footerLinkTitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fafafa;
+    margin-bottom: 35px;
+}
+
+.footerLinkCollections {
+    display: grid;
+    gap: 22px;
+}
+
+.footerLinkCollections li {
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footerLinkCollections li:last-child {
+    margin-bottom: 0;
+}
+
+.footerLinkCollections li span {
+    display: inline-flex;
+}
+
+.footerLinkCollections li span svg {
+    font-style: 22px !important;
+}
+
+.footerLinkCollections li a {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fafafa;
+}
+
+.footerBottom p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #a0a4a8;
+    padding-top: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    .footerWidget {
+        padding-right: 0;
+    }
+
+    .footerArea {
+        padding: 40px 0;
+    }
+}

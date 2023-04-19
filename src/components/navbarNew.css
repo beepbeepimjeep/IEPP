@@ -1,0 +1,49 @@
+@media screen and (max-width: 760px) {
+    /* 隐藏 ul 元素 */
+    .navbar ul {
+      display: none;
+    }
+  
+    /* 显示汉堡按钮 */
+    .navbar .navbar-toggle {
+      display: block;
+      float: right;
+      margin-top: 11px;
+      margin-right: 15px;
+      border: none;
+      background-color: transparent;
+    }
+  
+    /* 汉堡按钮三条横线 */
+    .navbar .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #333;
+      margin-bottom: 4px;
+    }
+  
+    /* 汉堡按钮展开后的样式 */
+    .navbar .navbar-toggle.open .icon-bar:nth-of-type(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
+  
+    .navbar .navbar-toggle.open .icon-bar:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .navbar .navbar-toggle.open .icon-bar:nth-of-type(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  
+    /* 显示下拉导航栏 */
+    .navbar ul.open {
+      display: block;
+    }
+  
+    /* 隐藏 ul 元素时的样式 */
+    .navbar ul.hidden {
+      display: none;
+    }
+  }

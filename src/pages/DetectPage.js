@@ -5,6 +5,7 @@ import { searchURL } from "../service/urlService";
 import PasswordCheck from "../components/PasswordCheck";
 import Button from 'react-bootstrap/Button';
 import Navbar from '../components/Navbar'
+import Header from "../components/global/Header";
 
 const DetectPage = () => {
   const [urlInput, setUrlInput] = useState("");
@@ -264,7 +265,8 @@ const DetectPage = () => {
             Quiz
           </i>
         </div> */}
-        <Navbar />
+        {/* <Navbar /> */}
+        <Header />
       </div>
       
     </div>

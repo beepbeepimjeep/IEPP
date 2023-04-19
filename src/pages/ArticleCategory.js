@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ArticleCategory.css";
 import Navbar from '../components/Navbar'
-
+import Header from "../components/global/Header";
 
 
 const ArticleCategory = () => {
@@ -58,7 +58,7 @@ const ArticleCategory = () => {
           Quiz
         </i>
       </div> */}
-      <Navbar />
+      <Header />
 
       <div className="card-hovered-social-media-ma-parent">
         <div

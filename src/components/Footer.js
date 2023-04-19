@@ -62,7 +62,7 @@ export default function Todo() {
           </div>
         </div> */}
 
-        <div className="mt-5 pt-5 pb-5 footer">
+        <div className=" pt-5 pb-5 footer">
         <div className="container">
           <div className="row">
             <div className="col-lg-5 col-xs-12 about-company">
@@ -117,7 +117,7 @@ export default function Todo() {
 
             </div>
           </div>
-          <div className="row mt-5">
+          <div className="row">
             <div className="col copyright">
               <p className=""><small>© 2023. All Rights Reserved.</small></p>
             </div>

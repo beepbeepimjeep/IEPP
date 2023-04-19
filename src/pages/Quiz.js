@@ -2,7 +2,9 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Quiz.css";
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import NavbarNew from "../components/navbarNew";
+import Header from "../components/global/Header";
 
 const Quiz = () => {
   const navigate = useNavigate();
@@ -40,7 +42,9 @@ const Quiz = () => {
   }, [navigate]);
 
   return (
+    <><Header />
     <div className="quiz3">
+      
       <img className="quizimagegroup-icon" alt="" src="/group-10482@2x.png" />
       
       <div className="quizcard2">
@@ -138,10 +142,14 @@ const Quiz = () => {
           Quiz
         </i>
       </div> */}
-      <Navbar />
+
+      {/* <NavbarNew /> */}
+      {/* <Navbar /> */}
       <Footer />
 
     </div>
+
+    </>
   );
 };
 

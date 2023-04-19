@@ -177,7 +177,11 @@
     flex-shrink: 0;
     font-size: var(--font-size-xs);
   }
-  .footer1,
+  .footer1{
+    width: 100%;
+    background-color: aliceblue;
+
+  }
   .frame-parent3 {
     width: 1225.06px;
     display: flex;
@@ -203,7 +207,7 @@
     transform: translate(-50%, -50%); */
 
     position: absolute;
-    bottom: 50px;
+    /* bottom: 50px; */
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-abeezee);
