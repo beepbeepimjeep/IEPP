@@ -6,8 +6,7 @@ import classes from './aboutServices.module.css';
 const about_1 = require('../../assets/img/about-1.jpg');
 import { Link } from 'react-router-dom';
 import ArticleDetail from '../../pages/ArticleDetail';
-import Button from '@mui/material/Button';
-
+import BtnPrimary from '../buttons/BtnPrimary';
 
 function AboutSerivces() {
     return (
@@ -38,9 +37,8 @@ function AboutSerivces() {
                                 </p>
                             </div>
                         <div className={`${classes.learnMore}`}>
-                        <Link to="/article-detail">
-                                <Button variant="contained">Learn More</Button>
-                        </Link>
+                        
+                        <BtnPrimary title="Learn More" url="/article-detail" />
                         </div>
                         </div>
                     </Col>

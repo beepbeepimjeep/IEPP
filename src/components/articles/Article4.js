@@ -5,8 +5,7 @@ import classes from './aboutServices.module.css';
 const about_1 = require('../../assets/img/about-4.jpg');
 import { Link } from 'react-router-dom';
 import ArticleDetail from '../../pages/ArticleDetail';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import BtnPrimary from '../buttons/BtnPrimary';
 
 function Article4() {
     return (
@@ -27,7 +26,7 @@ function Article4() {
                     <Col lg={6} md={12}>
                         <div className={`${classes.aboutServicesLeft}`}>
                             <div className="sectionTopDescription">
-                                <span className="shape mobile-hide">Scamme</span>
+                                <span className="shape mobile-hide">Trading</span>
                                 <h2 className="mobile-hide">
                                 “Ships from the USA” doesn’t always mean “Made in the USA”
                                 </h2>
@@ -37,9 +36,7 @@ function Article4() {
                                 </p>
                             </div>
                         <div className={`${classes.learnMore}`}>
-                        <Link to="/article-detail">
-                                <Button variant="contained">Learn More</Button>
-                        </Link>
+                            <BtnPrimary title="Learn More" url="/article-detail" /> 
                         </div>
                         </div>
                     </Col>
