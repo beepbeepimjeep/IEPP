@@ -28,7 +28,7 @@ function Services() {
           <Article3/>
           <Article4/>
 
-
+          <Footer />
       </>
   );
 }

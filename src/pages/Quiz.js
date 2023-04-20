@@ -6,41 +6,10 @@ import Navbar from '../components/Navbar';
 import NavbarNew from "../components/navbarNew";
 import Header from "../components/global/Header";
 import Banner from "../components/global/Banner";
+import Quiz1 from "../components/quiz/Quiz1";
+import Quiz2 from "../components/quiz/Quiz2";
 
 const Quiz = () => {
-  const navigate = useNavigate();
-
-/*   const onButtonClick = useCallback(() => {
-    navigate("/quiz-detail");
-  }, [navigate]);
-
-  const onSTARTTextClick = useCallback(() => {
-    navigate("/quiz-detail");
-  }, [navigate]);
-
-  const onButton1Click = useCallback(() => {
-    navigate("/quiz-detail");
-  }, [navigate]);
-
-  const onSTARTText2Click = useCallback(() => {
-    navigate("/quiz-detail");
-  }, [navigate]);
- */
-  const onHomeTextClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onArticlesTextClick = useCallback(() => {
-    navigate("/article-category");
-  }, [navigate]);
-
-  const onDetectTextClick = useCallback(() => {
-    navigate("/detect-page");
-  }, [navigate]);
-
-  const onQuizTextClick = useCallback(() => {
-    navigate("/quiz");
-  }, [navigate]);
 
   return (
     <>
@@ -50,6 +19,11 @@ const Quiz = () => {
         smTitle="QUIZ"
         breadcrumb="Home / Quiz"
       />
+      <Quiz1/>
+      <Quiz2/>
+
+     {/*  <Footer /> */}
+
       </>
   )
 };
