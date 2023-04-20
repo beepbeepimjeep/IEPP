@@ -1,5 +1,6 @@
 require('./model/index');
 const urlSearchRouter = require('./routes/urlSearchRouter');
+const fakeNewRouter = require('./routes/fakeNewRouter');
 const cors = require('cors');
 var createError = require('http-errors');
 var express = require('express');
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/url', urlSearchRouter);
+app.use('/newCheck',fakeNewRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
