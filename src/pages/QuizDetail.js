@@ -149,12 +149,7 @@ const QuizDetail = () => {
           {/* {QuizCount} < {quizQuestions.length}  */}
           {QuizCount <= quizQuestions.length ? (
             <div className="EvenythingQuiz">
-              <span className="QuizContainer">
-                <p className="QuizTitle">
-                  {/* 找到与当前进度一样的Quiz */}
-                  {currentQuestion.question}
-                </p>
-              </span>
+              
 
               <span className="QuizContainer">
                 <p className="QuizTitle">
@@ -162,6 +157,7 @@ const QuizDetail = () => {
                   {currentQuestion.question}
                 </p>
               </span>
+              
             </div>
           ) : (
             null
@@ -224,14 +220,21 @@ const QuizDetail = () => {
         ) :
         
         
-        <div className="detailedquiz ">
+        <div className="detailedquiz">
+          {/* <div className="detailedquiz-child" > */}
           <div className="detailedquiz-child" >
             
           <img className="resultImage" src='https://s1.ax1x.com/2023/04/11/ppOioUs.png'></img>
             <div className="resultDetail">
-              <h1>Congratulations </h1>
+              {/* <P>Congratulations</P> */}
+              <span>Congratulations<br/>
+                You have completed the quiz<br/>
+                Your results: {score}/{quizQuestions.length}
+              </span>
+              {/* <h1>Congratulations </h1>
               <h2>You have completed the quiz</h2><br></br>
-              <h2>Your results: {score}/{quizQuestions.length}</h2>
+              <h2>Your results: {score}/{quizQuestions.length}</h2> */}
+
             </div>
           </div>
         </div>
