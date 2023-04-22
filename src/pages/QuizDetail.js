@@ -1,7 +1,8 @@
 // import { useCallback } from "react";
 // import { useNavigate } from "react-router-dom";
 import "./QuizDetail.css";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+import Header from "../components/global/Header";
 import quizQuestions from "../components/quizQuestions";
 import { useState } from "react";
 
@@ -120,7 +121,8 @@ const QuizDetail = () => {
   };
 
   return (
-    
+    <div>
+    <Header />
     <div className="quiz-detail">
       {isShow ? (
       <div className="detailedquiz ">
@@ -238,7 +240,9 @@ const QuizDetail = () => {
         }
       
 
-      <Navbar />
+      
+    </div>
+
     </div>
 
 

@@ -6,7 +6,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { MdAlternateEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/logoWhite.png';
 import classes from './footer.module.css';
 
 function Footer() {

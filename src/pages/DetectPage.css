@@ -302,7 +302,8 @@
   justify-content: flex-start;
   width: 100%;
   align-items: center;
-  gap: var(--gap-21xl);
+  gap: var(--gap-28xl);
+  margin-top: 30px;
 }
 
 .newsletter1 {
@@ -345,6 +346,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  background-position: center;
   
 }
 
@@ -361,9 +363,13 @@
 
   
 } */
+.boxContain{
+  height: 40%;
+  margin-top: 15%;
+}
 .PasswordCheck {
   position: absolute; /* 将元素设置为固定定位 */
-  top: 52%; /* 将元素的顶部定位到页面垂直中心 */
+  top: 41%; /* 将元素的顶部定位到页面垂直中心 */
   left: 48%; /* 将元素的左侧定位到页面水平中心 */
   transform: translate(-50%, -50%); /* 使用translate将元素向左和向上移动一半的宽度和高度，以使其完全居中 */
   
@@ -374,12 +380,53 @@
   text-align: center;
 }
 .pswchecker{
-  margin-top: 80px;
+  margin-top: 10%;
   width: 35%;
   /* padding-top: 30px; */
-  margin-left: 7%;
+  /* margin-left: 7%; */
   margin-bottom: 3%;
+
+ 
 }
+@media screen and (max-width: 1600px) {
+  /* .pswchecker {
+    margin-top: 60%;
+  } */
+}
+@media screen and (max-width: 1200px) {
+  .pswchecker {
+    margin-top: 75%;
+  }
+  .boxContain {
+    transform: translateX(-20%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .boxContain{
+    position: fixed;
+    top: 20%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .boxContain{
+    position: fixed;
+    top: 30%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+  }
+  .PasswordCheck{
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inputsearch{
+    width: 90vw;
+  }
+}
+
 
 .spinner {
   /* Size */

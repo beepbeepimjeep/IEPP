@@ -95,7 +95,10 @@ const DetectPage = () => {
   };
 
   return (
+    
+   
     <div>
+    <Header />
       <div className="detect-page">
         {/* Test your password strength */}
         {/* <div className="newsletter">
@@ -133,14 +136,19 @@ const DetectPage = () => {
           </div>
         </div> */}
         {/* Detect the URL of website */}
-        <div className="newsletter1">
+        
+        {/* <div className="newsletter1"> */}
 
-          <div className="buttontertiary pswchecker" onClick={HandleshowPasswordCheck}>
-                  <Button className="primary" variant="info">Password checker</Button>
-                </div>
+        <div className="container col-4 boxContain">
+
+          <div className="pswchecker" onClick={HandleshowPasswordCheck}>
+          {/* <div className="buttontertiary pswchecker" onClick={HandleshowPasswordCheck}> */}
+            <Button className="primary" variant="info">Password checker</Button>
+          </div>
 
           <div className="title-text1">
-            <i className="test-your-password">Detect the URL of website</i>
+            <h3 className="">Detect the URL of website</h3>
+            
             <div className="inputsearch">
               <div className="inputsearch-child" />
               <div className="label-parent">
@@ -266,10 +274,12 @@ const DetectPage = () => {
           </i>
         </div> */}
         {/* <Navbar /> */}
-        <Header />
+        
       </div>
       
     </div>
+
+    
   );
 };
 

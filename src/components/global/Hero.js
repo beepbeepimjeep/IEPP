@@ -15,7 +15,29 @@ import bgimage from '../../assets/img/bgimage.jpg';
 import BtnPrimary from '../buttons/BtnPrimary';
 import classes from './hero.module.css';
 
+// import { useCallback } from "react";
+// import { useNavigate } from "react-router-dom";
+
 function Hero() {
+    // const navigate = useNavigate();
+
+    // const onButtonsContainerClick = useCallback(() => {
+    //   navigate("/article-category");
+    // }, [navigate]);
+  
+    // const onLabelTextClick = useCallback(() => {
+    //   navigate("/article-category");
+    // }, [navigate]);
+  
+    // const onButtonsContainer1Click = useCallback(() => {
+    //   navigate("/detect-page");
+    // }, [navigate]);
+  
+    // const onLabelText1Click = useCallback(() => {
+    //   navigate("/detect-page");
+    // }, [navigate]);
+
+
     return (
         <div id="hero" className="hero pt-100 pb-70 position-relative">
             {/* <img src={dot} className={classes.dot} alt="dot" />
@@ -68,8 +90,8 @@ function Hero() {
                                 A great Tool for you to detect Web URL with simple click.
                                 
                             </p>
-                            <BtnPrimary url="/" title="Lern More About internet fraud" />
-                            <BtnPrimary url="/" title="Detect Web URL for free" />
+                            <BtnPrimary url="/article-category" title="Lern More About internet fraud" />
+                            <BtnPrimary url="/detect-page" title="Detect Web URL for free" />
 
                         </div>
                     </Col>
