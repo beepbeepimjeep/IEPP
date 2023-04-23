@@ -105,3 +105,9 @@
   
    
   }
+
+.showResult{
+    color: black;
+    overflow: auto;
+    height: 100px;
+}

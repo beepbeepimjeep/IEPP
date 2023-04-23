@@ -11,3 +11,15 @@ export async function searchURL(url) {
         return [];
     }
 }
+
+
+export async function searchArticle(keywords) {
+    try {
+        const response = await fetch(`https://ieppteam4.chickenkiller.com/newCheck?claim=${keywords}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}

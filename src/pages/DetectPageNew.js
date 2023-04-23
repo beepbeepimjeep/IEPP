@@ -7,9 +7,10 @@ import Banner from "../components/global/Banner";
 // copy from previous
 import { useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
-import { searchURL } from "../service/urlService";
+import { searchURL, searchArticle } from "../service/urlService";
 import PasswordCheck from "../components/PasswordCheck";
 
+import Button from 'react-bootstrap/Button';
 
 const DetectPageNew = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -20,17 +21,18 @@ const DetectPageNew = () => {
 
   // copy from previous
   const [urlInput, setUrlInput] = useState("");
+  const [articleInput, setArticleInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [urlError, setUrlError] = useState("");
+  const [articleError, setArticleError] = useState("");
   const navigate = useNavigate();
   const [showpassword, setShowpassword] = useState(false);
 
   const [urlResult, setUrlResult] = useState(null); //保存返回的数据
+  const [articleResult, setArticleResult] = useState(null); //保存article的数据
   const [isLoading, setIsLoading] = useState(false); // 新增 isLoading 状态
 
-
   const renderContent = () => {
-    
     switch (activeTab) {
       case "home":
         return (
@@ -160,19 +162,19 @@ const DetectPageNew = () => {
                       <input
                         className="InputUrl"
                         placeholder="Enter the Article Title"
-                        value={urlInput}
-                        onChange={handleUrlInputChange}
+                        value={articleInput}
+                        onChange={handleArticleInputChange}
                         onKeyPress={(event) => {
                           if (event.key === "Enter") {
                             console.log("key is pressed");
-                            handleUrlSubmit();
+                            handleArticleSubmit();
                           }
                         }}
                       />
                       <div className="buttonsecondary1">
                         <div
                           className="iconlybulksend-parent"
-                          onClick={handleUrlSubmit}
+                          onClick={handleArticleSubmit}
                         >
                           <img
                             className="iconlybulksend"
@@ -182,15 +184,15 @@ const DetectPageNew = () => {
                           <i className="label3">Detect</i>
                         </div>
                       </div>
-
-                     
                     </div>
                   </div>
                   {isLoading ? <div className="spinner"></div> : null}
 
-                  {urlError && <div className="error-message"> url error</div>}
+                  {articleError && (
+                    <div className="error-message"> Article error</div>
+                  )}
 
-                  {urlResult === null ? (
+                  {/* {urlResult === null ? (
                     <div></div>
                   ) : urlResult.result[0].length == 0 &&
                     urlResult.result[1].length == 0 &&
@@ -228,7 +230,53 @@ const DetectPageNew = () => {
                           ))}
                       </ul>
                     </div>
-                  )}
+                  )} */}
+
+                  {/* <div className="url-result">
+                    <div className="result-title">Results:</div>
+                    <ul>
+                      {articleResult.result &&
+                        articleResult.result[0] &&
+                        articleResult.result[0].map((item, index) => (
+                          <li className="result-item" key={index}>
+                            {item}
+                          </li>
+                        ))}
+                    </ul>
+                  </div> */}
+
+                  <div className="showResult">
+                    {articleResult && articleResult.emptyResult && (
+                      <p>Your claim did not match any result</p>
+                    )}
+                    {articleResult &&
+                    articleResult.resultArray &&
+                    articleResult.resultArray.length > 0 ? (
+                      <ul>
+                        {articleResult.resultArray.map((item) => (
+                          <li key={item.url}>
+                            <strong>Claim:</strong> {item.claim}
+                            <br />
+                            <strong>Result:</strong> {item.result}
+                            <br />
+                            {/* <strong>URL:</strong> {item.url} */}
+
+                            {/* <Button variant="secondary" size="sm" href={item.url}>
+                            Access
+                          </Button> */}
+
+                          <Button variant="secondary" size="sm" href={item.url} target="_blank">
+                            Access
+                          </Button>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>No results found</p>
+                    )}
+                  </div>
+
+
                 </div>
               </Card.Body>
             </Card>
@@ -240,11 +288,7 @@ const DetectPageNew = () => {
             className={`container ${activeTab === "link-2" ? "" : "hidden"}`}
           >
             <div className="cardStyle">
-                
-              
-                 
-              <PasswordCheck style={{left:'0'}}/>
-            
+              <PasswordCheck style={{ left: "0" }} />
             </div>
           </div>
         );
@@ -278,6 +322,10 @@ const DetectPageNew = () => {
   const handleUrlInputChange = (event) => {
     setUrlInput(event.target.value.replace(/\r?\n/g, ""));
   };
+  // 改变article 输入状态
+  const handleArticleInputChange = (event) => {
+    setArticleInput(event.target.value.replace(/\r?\n/g, ""));
+  };
 
   const handlePasswordInputChange = (event) => {
     setPasswordInput(event.target.value.replace(/\r?\n/g, ""));
@@ -309,6 +357,39 @@ const DetectPageNew = () => {
     // Send URL to backend
     setUrlInput("");
     setUrlError("");
+  };
+  // handle artcile submit
+  const handleArticleSubmit = async () => {
+    console.log("Submitted Keywords:", articleInput);
+    const articleResult = await searchArticle(articleInput);
+    console.log("Article result is ", articleResult);
+    // console.log(articleResult);
+    setArticleResult(articleResult);
+    // console.log("Article result is "+ articleResult);
+
+    if (articleInput === "") {
+      window.alert("Please enter your keywords/ Article Title");
+    } else {
+      setIsLoading(true); // 设置为正在加载状态
+      try {
+        // const articleResult = await searchArticle(articleInput);
+        // console.log(articleResult);
+        // // searchArticle(result);
+        // setArticleResult(articleResult);
+        console.log("Submitted Keywords:", articleInput);
+        const articleResult = await searchArticle(articleInput);
+        console.log("Article result is ", articleResult);
+        // console.log(articleResult);
+        setArticleResult(articleResult);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false); // 加载完成后设置为非加载状态
+      }
+    }
+    // Send URL to backend
+    setArticleInput("");
+    setArticleError("");
   };
 
   const handlePasswordSubmit = () => {
