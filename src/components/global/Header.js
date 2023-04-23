@@ -99,6 +99,9 @@ function Header() {
                             <NavLink className="navLink" exact to="/detect-page">
                                 Detect
                             </NavLink>
+                            <NavLink className="navLink" exact to="/simulator-page">
+                                Simulator
+                            </NavLink>
 
                             {/* <NavDropdown
                                 title="Pages"
