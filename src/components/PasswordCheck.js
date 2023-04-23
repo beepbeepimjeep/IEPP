@@ -56,10 +56,10 @@ function PasswordCheck() {
     <div style={{ width: '18rem' }}>
       <div className="card">
         <div className="card-header">
-          <h6 className="title">Password Strength Checker</h6>
+          <h3 >Password Strength Checker</h3>
         </div>
 
-        <div className="card-body">
+        <div className="card-body-psw">
           <div className="input-container">
             <div className="input-box">
               <input
@@ -108,7 +108,7 @@ function PasswordCheck() {
               Your password is {message}
               {password.length >= 16 && " (16+ characters, strong)"}
             </p>
-            {message !== "Strong" ? <p className="p-2">Tips: Try to add UpperCase or '!@#$'</p>: null}
+            {message !== "Strong" ? <p className="p-2" >Tips: Try to add UpperCase or '!@#$'</p>: null}
 
             </div>
 

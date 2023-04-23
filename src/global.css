@@ -771,7 +771,8 @@ Typography End
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   color: #fff !important;
-  background-color: var(--bs-dark-green) !important;
+  /* background-color: var(--bs-dark-green) !important; */
+  background-color: var(--color-mediumseagreen-100) !important;
   border-color: transparent;
 }
 

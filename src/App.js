@@ -11,8 +11,9 @@ import Quiz from "./pages/Quiz";
 import QuizDetail from "./pages/QuizDetail";
 import DetectPage from "./pages/DetectPage";
 import BackUp from "./pages/BackUp";
+import DetectPageNew from "./pages/DetectPageNew";
 import { useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import font awesome
@@ -66,6 +67,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/DetectPageNew":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -91,6 +96,8 @@ function App() {
       <Route path="/quiz-detail" element={<QuizDetail />} />
       <Route path="/detect-page" element={<DetectPage />} />
       <Route path="/back-up" element={<BackUp />} />
+      <Route path="/DetectPageNew" element={<DetectPageNew />} />
+
     </Routes>
   );
 }
