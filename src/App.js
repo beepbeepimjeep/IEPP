@@ -14,6 +14,7 @@ import BackUp from "./pages/BackUp";
 import DetectPageNew from "./pages/DetectPageNew";
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SimulatorPage from "./pages/SimulatorPage";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import font awesome
@@ -63,6 +64,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/simulator-page":
+        title = "";
+        metaDescription = "";
+        break;
       case "/back-up":
         title = "";
         metaDescription = "";
@@ -97,7 +102,7 @@ function App() {
       <Route path="/detect-page" element={<DetectPage />} />
       <Route path="/back-up" element={<BackUp />} />
       <Route path="/DetectPageNew" element={<DetectPageNew />} />
-
+      <Route path="/simulator-page" element={<SimulatorPage />} />
     </Routes>
   );
 }

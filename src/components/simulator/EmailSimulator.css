@@ -1,0 +1,90 @@
+/* EmailSimulator.css */
+.email-simulator {
+    border: 1px solid #ccc;
+    max-width: 1000px; /* 放大组件 */
+    margin: 50px auto; /* 向下移动组件 */
+    background-color: #f8f9fa;
+    padding: 20px; /* 增加内边距 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 2;
+  }
+  
+  .email-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .email-list-item {
+    padding: 20px; /* 增加内边距 */
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .email-list-item:hover {
+    background-color: #e9ecef;
+  }
+  
+  .email-content {
+    padding: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+  }
+
+  .payment-form {
+    padding: 20px;
+
+    
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+  }
+  
+  .email-content {
+    padding: 16px;
+  }
+  
+  .content-spacing {
+    padding: 32px;
+  }
+  
+  .payment-form {
+    padding: 16px;
+  }
