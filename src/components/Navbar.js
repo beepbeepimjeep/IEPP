@@ -128,6 +128,13 @@ class Navbar extends React.Component {
                   >
                     <a href="/detect-page">Detect</a>
                   </li>
+                  
+                  <li
+                    className={currentPath === "/DetectPageNew" ? "active" : ""}
+                  >
+                    <a href="/detect-page">DetectNew</a>
+                  </li>
+
                   <li className={currentPath === "/quiz" ? "active" : ""}>
                     <a href="/quiz">Quiz</a>
                   </li>
@@ -150,6 +157,11 @@ class Navbar extends React.Component {
                 <li className={currentPath === "/detect-page" ? "active" : ""}>
                   <a href="/detect-page">Detect</a>
                 </li>
+
+                <li className={currentPath === "/DetectPageNew" ? "active" : ""}>
+                  <a href="/DetectPageNew">DetectNew</a>
+                </li>
+                
                 <li className={currentPath === "/quiz" ? "active" : ""}>
                   <a href="/quiz">Quiz</a>
                 </li>
