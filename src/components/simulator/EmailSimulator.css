@@ -88,3 +88,82 @@
   .payment-form {
     padding: 16px;
   }
+
+  .rightItem {
+    color: black;
+    margin-left: auto;
+  }
+.pageNav {
+  margin-Bottom: 0px !important;
+}
+.nav-link.active {
+  background-color: white !important;
+  color: #0069d9 !important;
+  border-bottom: 5px solid blue !important;
+}
+
+.a .list-group-item{
+  margin-right: 5px !important;
+}
+
+.email-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+.email-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.email-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.email-header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.email-body {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.email-body h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.email-body p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+
+.alert {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
