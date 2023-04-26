@@ -9,6 +9,7 @@ import ArticleCategory from "./pages/ArticleCategory";
 import ArticleDetail from "./pages/ArticleDetail";
 import Quiz from "./pages/Quiz";
 import QuizDetail from "./pages/QuizDetail";
+import QuizSecurity from "./pages/QuizSecurity";
 import DetectPage from "./pages/DetectPage";
 import BackUp from "./pages/BackUp";
 import DetectPageNew from "./pages/DetectPageNew";
@@ -41,39 +42,43 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
+        title = "Trust Online Victoria";
         metaDescription = "";
         break;
       case "/article-category":
-        title = "";
+        title = "Article Category--TOV";
         metaDescription = "";
         break;
       case "/article-detail":
-        title = "";
+        title = "Article Details-TOV";
         metaDescription = "";
         break;
       case "/quiz":
-        title = "";
+        title = "Quiz-TOV";
         metaDescription = "";
         break;
       case "/quiz-detail":
-        title = "";
+        title = "Test your password knowledge-TOV";
+        metaDescription = "";
+        break;
+      case "/quiz-security":
+        title = "Test online Security knowledge-TOV";
         metaDescription = "";
         break;
       case "/detect-page":
-        title = "";
+        title = "Find issues--TOV";
         metaDescription = "";
         break;
       case "/simulator-page":
-        title = "";
+        title = "Simulator-TOV";
         metaDescription = "";
         break;
       case "/back-up":
-        title = "";
+        title = "Back Up-TOV";
         metaDescription = "";
         break;
       case "/DetectPageNew":
-        title = "";
+        title = "Find Issues--TOV";
         metaDescription = "";
         break;
     }
@@ -99,6 +104,7 @@ function App() {
       <Route path="/article-detail" element={<ArticleDetail />} />
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/quiz-detail" element={<QuizDetail />} />
+      <Route path="/quiz-security" element={<QuizSecurity />} />
       <Route path="/detect-page" element={<DetectPage />} />
       <Route path="/back-up" element={<BackUp />} />
       <Route path="/DetectPageNew" element={<DetectPageNew />} />

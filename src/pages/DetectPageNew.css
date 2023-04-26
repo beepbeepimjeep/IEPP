@@ -111,3 +111,51 @@
     overflow: auto;
     height: 100px;
 }
+
+/* 适配Pad设备 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* 在这里写需要适配Pad设备的样式 */
+
+    .card {
+        height: 350px;
+        position: absolute;
+        top: 24%;
+        left: 20%;
+    }
+    .cardStyle {
+        /* height: 40%!important; */
+        width: 56vw!important;
+        /* position: 'fixed';
+        top: '20%';
+        display: 'fixed'; */
+    }
+}
+  
+  /* 适配移动设备(H5) */
+@media (max-width: 767px) {
+    /* 在这里写需要适配移动设备的样式 */
+    .card {
+        height: 350px;
+        position: absolute;
+        top: 24%;
+        left: 3%;
+        width: 80%!important; /* 这里使用important选择性地强制使之在最上面 */
+    }
+    .cardStyle {
+        /* height: 40%!important; */
+        width: 90vw!important;
+        /* position: 'fixed';
+        top: '20%';
+        display: 'fixed'; */
+    }
+    .buttonsecondary1{
+        width: 30%;
+        font-size: small;
+    }
+}
+
+/* .showResult{
+    color: black;
+    overflow: auto;
+    height: 100px;
+} */

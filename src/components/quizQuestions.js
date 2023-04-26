@@ -1,94 +1,105 @@
 var quizQuestions = [
   {
     questionId:"1",
-    question: "What franchise would you rather play a game from?",
+    question: "What is the best practice for creating strong passwords?",
     answers: 
     [
       {
         answerID: "1",
-        content: "Halo",
+        content: "Use dictionary words or phrases",
       },
       {
         answerID: "2",
-        content: "Pokemon",
+        content: "Include personal information like birth dates or names",
       },
       {
         answerID: "3",
-        content: "Uncharted",
+        content: "Use a combination of uppercase and lowercase letters, numbers, and symbols",
       },
+      {
+        answerID: "4",
+        content: "Use the same password for multiple accounts",
+      }
     ],
-    CorrectAnswer: "1"
+    CorrectAnswer: "3"
 
   },
   {questionId:"2",
-    question: "Which console would you prefer to play with friends?",
+    question: "What is the purpose of password protection?",
     answers: [
       {
         answerID: "1",
-        content: "X-Box",
+        content: "To keep your computer running smoothly",
       },
       {
         answerID: "2",
-        content: "Nintendo 64",
+        content: "To prevent unauthorized access to your personal information",
       },
       {
         answerID: "3",
-        content: "Playstation 1",
+        content: "To protect against malware and viruses",
       },
     ],CorrectAnswer: "2",
   },
   {questionId:"3",
     question:
-      "Which of these racing franchises would you prefer to play a game from?",
+      "How often should you change your password?",
     answers: [
       {
         answerID: "1",
-        content: "Forza",
+        content: "Every day",
       },
       {
         answerID: "2",
-        content: "Mario Kart",
+        content: "Every week",
       },
       {
         answerID: "3",
-        content: "Gran Turismo",
+        content: "Every month",
       },
-    ],CorrectAnswer: "3",
+      {
+        answerID: "4",
+        content: "Every few months",
+      }
+    ],CorrectAnswer: "4",
   },
   {questionId:"4",
-    question: "Which of these games do you think is best?",
+    question: "What is two-factor authentication?",
     answers: [
       {
         answerID: "1",
-        content: "BioShock",
+        content: "A way to protect your password from being stolen by using a physical token or smartphone app",
       },
       {
         answerID: "2",
-        content: "The Legend of Zelda: Ocarina of Time",
+        content: "A way to allow multiple users to access the same account",
       },
       {
         answerID: "3",
-        content: "Final Fantasy VII",
+        content: "A way to encrypt your password and personal data",
       },
-    ],CorrectAnswer: "2",
+    ],CorrectAnswer: "1",
   },
   {questionId:"5",
-    question: "What console would you prefer to own?",
+    question: "What should you do if you suspect that your password has been compromised?",
     answers: [
       {
         answerID: "1",
-        content: "X-Box One",
+        content: "Do nothing, as changing your password can cause more problems",
       },
       {
         answerID: "2",
-        content: "Wii U",
+        content: "Immediately change your password and notify any affected parties",
       },
       {
         answerID: "3",
-        content: "Playstation 4",
-      },
+        content: "Wait for a few weeks to see if anything suspicious happens",
+      },{
+        answerID: "4",
+        content: "Contact customer support for advice",
+      }
     ],
-    CorrectAnswer: "1",
+    CorrectAnswer: "2",
   },
 ];
 
