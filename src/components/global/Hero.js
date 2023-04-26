@@ -90,7 +90,7 @@ function Hero() {
                                 A great Tool for you to detect Web URL with simple click.
                                 
                             </p>
-                            <BtnPrimary url="/article-category" title="Learn More About internet fraud" />
+                            <BtnPrimary url="/article-category" title="Lern More About internet fraud" />
                             <BtnPrimary url="/detect-page" title="Detect Web URL for free" />
 
                         </div>

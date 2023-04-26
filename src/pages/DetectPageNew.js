@@ -408,7 +408,7 @@ const DetectPageNew = () => {
       <Banner
         // pageTitle="Tools empower yourself "
         smTitle="Tools"
-        breadcrumb="Home / Detect"
+        breadcrumb="Detect"
       />
       {/* <div className="container mt-3">
 
