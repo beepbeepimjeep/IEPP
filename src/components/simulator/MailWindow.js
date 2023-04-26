@@ -8,7 +8,7 @@ import {faStar} from '@fortawesome/free-regular-svg-icons'
 import { colors } from '@mui/material';
 
 
-const fakeEmails = [
+/*const fakeEmails = [
   {
     id: 1,
     from: 'Wrong Company A',
@@ -30,7 +30,7 @@ const fakeEmails = [
     body: 'Dear customer, please click on this incorrect link to pay your bill.',
 
   }
-];
+];*/
 
 function EmailSimulator() {
   const [stage, setStage] = useState(0);
@@ -79,11 +79,25 @@ function EmailSimulator() {
 
    
       {stage === 0 && (
-        <div className="start-button">
-          <button className="btn" onClick={startSimulation}>
-            Start
-          </button>
+        <div className="startPage">
+        <h3 className="text-center mb-4">Spam Email Simulation</h3>
+        <div className="row justify-content-center mb-4">
+          <div className="col-md-6">
+            <p className="lead">We want to mimic a real life situation here</p>
+            <p className="lead">Here you will be presented with series of emails and try to interact with them as if they were real</p>
+            <p className="lead">Your goal is to reach the end and identify different ways you are able to tell a spam email from a good email</p>
+            <p className="lead">Good luck and have fun</p>
+          </div>
         </div>
+        <div className="row justify-content-center">
+          <div className="col-md-2">
+            <button className="btn btn-danger" onClick={startSimulation}>
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+      
       )}
 
     {stage === 1 && (
@@ -130,7 +144,7 @@ function EmailSimulator() {
                 <FontAwesomeIcon icon={faStar} style={{alignSelf: "center", marginRight: '10px'}}/>
                 <span className="name" style={{ minWidth: "200px", display: "inline-block",  marginRight: '5px', fontWeight: 'bold'}}>AU-servicePOst!</span>
                 <span className="title" style={{marginRight: '10px', fontWeight: 'bold'}}>VERiFiCatiOn-990031</span>
-                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - #tom19970517</span>
+                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - #meera20040517</span>
                 <span className="rightItem badge">12:10 AM</span>
                 <span className="pull-right">
                   <FontAwesomeIcon icon={faPaperclip} />
@@ -156,13 +170,38 @@ function EmailSimulator() {
                 <FontAwesomeIcon icon={faStar} style={{alignSelf: "center", marginRight: '10px'}}/>
                 <span className="name" style={{ minWidth: "200px", display: "inline-block",  marginRight: '5px'}}>McDonald's Account</span>
                 <span className="title" style={{marginRight: '10px'}}>Order Drive Thru</span>
-                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - TAX INVOICE Hey Tom, Thank you for ordering with the MyMacca's app.</span>
+                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - TAX INVOICE Hey Meera, Thank you for ordering with the MyMacca's app.</span>
                 <span className="rightItem badge">05:15 PM</span>
                 <span className="pull-right">
                   <FontAwesomeIcon icon={faPaperclip} />
                 </span>
               </a>
-              
+              <a href="#" className="list-group-item emailElement" style={{display: 'flex'}}>
+                  <label style={{marginRight: '10px'}}>
+                    <input type="checkbox" />
+                  </label>
+                <FontAwesomeIcon icon={faStar} style={{alignSelf: "center", marginRight: '10px'}}/>
+                <span className="name" style={{ minWidth: "200px", display: "inline-block",  marginRight: '5px'}}>Do not reply to thi.</span>
+                <span className="title" style={{marginRight: '10px'}}>This is your Turnitin Digital Receipt</span>
+                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - Dear Meera Mala, you have successfully submitted the file</span>
+                <span className="rightItem badge">02:40 PM</span>
+                <span className="pull-right">
+                  <FontAwesomeIcon icon={faPaperclip} />
+                </span>
+              </a>
+              <a href="#" className="list-group-item emailElement" style={{display: 'flex'}}>
+                  <label style={{marginRight: '10px'}}>
+                    <input type="checkbox" />
+                  </label>
+                <FontAwesomeIcon icon={faStar} style={{alignSelf: "center", marginRight: '10px'}}/>
+                <span className="name" style={{ minWidth: "200px", display: "inline-block",  marginRight: '5px'}}>noreply</span>
+                <span className="title" style={{marginRight: '10px'}}>Payslip for Meera Mala for Week ending 16 Apr 2023</span>
+                <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - Your payslip is ready!</span>
+                <span className="rightItem badge">01:31 PM</span>
+                <span className="pull-right">
+                  <FontAwesomeIcon icon={faPaperclip} />
+                </span>
+              </a>
             </div>
           </Tab.Pane>
           <Tab.Pane eventKey="social">
@@ -181,11 +220,11 @@ function EmailSimulator() {
         <div className="email-header">
           <h4>VERiFiCatiOn-990031</h4>
           <p>From: rp.LTBpKOYY0x@mail.vxiedz8in8.com</p>
-          <p>To: tom@gmail.com</p>
+          <p>To: meeramala@gmail.com</p>
           <p>Date: 26 April 2023, 12:10 AM</p>
         </div>
         <div className="email-body">
-          <p>Dear Tom,</p>
+          <p>Dear Meera,</p>
           <p>This is just a quick update to let you know that your order is now in the mail and on its way to you. To track your shipment and view the delivery status, click on the link below.</p>
           <p>However, keep in mind that constantly updating the tracking number will not speed up the delivery of your package.
             Estimated shipping: ~ 1 - 2 days
