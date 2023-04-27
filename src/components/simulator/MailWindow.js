@@ -5,39 +5,19 @@ import { Tab, Tabs, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInbox, faPaperclip, faTag, faUsers, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import {faStar} from '@fortawesome/free-regular-svg-icons'
-import { colors } from '@mui/material';
 
-
-/*const fakeEmails = [
-  {
-    id: 1,
-    from: 'Wrong Company A',
-    subject: 'Payment Notice',
-    body: 'Dear customer, please click on this incorrect link to pay your bill.',
-
-  },
-  {
-    id: 2,
-    from: 'Wrong Company B',
-    subject: 'Payment Notice',
-    body: 'Dear customer, please click on this incorrect link to pay your bill.',
-
-  },
-  {
-    id: 3,
-    from: 'Wrong Company C',
-    subject: 'Payment Notice',
-    body: 'Dear customer, please click on this incorrect link to pay your bill.',
-
-  }
-];*/
+const CardIcon = require('../../assets/img/credit-card-icons.png');
 
 function EmailSimulator() {
   const [stage, setStage] = useState(0);
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [cardNumber, setCardNumber] = useState('');
-  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [cw, setCw] = useState('');
   const [activeTab, setActiveTab] = useState("primary");
+
+  const packageCode = Math.floor(Math.random() * 1000000);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -240,39 +220,104 @@ function EmailSimulator() {
     )}
 
       {stage === 3 && (
-        <div className="payment-form content-spacing">
-          <h3>Payment</h3>
-          <div className="form-group">
-            <label className="form-label" htmlFor="cardNumber">
-              Card Number
-            </label>
-            <input
-              type="text"
-              id="cardNumber"
-              className="form-control"
-              placeholder="Please enter your Card Number"
-              required
-              value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value)}
-            />
+        <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <h4>package Code</h4>
           </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="password">
-              password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="form-control"
-              placeholder="Please enter your Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+          <div className="col-md-6">
+            <h4>{packageCode}</h4>
           </div>
-          <button className="btn" onClick={submitPayment}>
+        </div>
+
+        <div className="row">
+        <div className="col-md-6">
+          <label className="form-label" htmlFor="firstName">
+            First Name
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            className="form-control"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div className="col-md-6">
+          <label className="form-label" htmlFor="lastName">
+            Last Name
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            className="form-control"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        </div>
+
+        <div className="row">
+        <div className="col-md-6">
+          <label className="form-label" htmlFor="cardName">
+            Card Number
+          </label>
+          <input
+            type="text"
+            id="cardNumber"
+            className="form-control"
+            placeholder="Card Number"
+            required
+          />
+        </div>
+        <div className="col-md-6">
+          <label className="form-label" htmlFor="cw">
+            CW
+          </label>
+          <input
+            type="text"
+            id="cw"
+            className="form-control"
+            placeholder="CW"
+            required
+          />
+        </div>
+
+          
+          
+        </div>
+
+        <div className="row">
+        <div className="col-md-6">
+              <img src={CardIcon} alt="Payment logos" />
+            </div>
+        <div className="col-md-6">
+          <label className="form-label" htmlFor="expirationDate">
+          Expiration Date
+          </label>
+          <input
+            type="text"
+            id="expirationDate"
+            className="form-control"
+            placeholder="MM/YY"
+            required
+          />
+        </div>
+        <button className="btn" onClick={submitPayment} style={{
+                backgroundColor: "#007bff",
+                borderColor: "#007bff",
+                color: "#fff",
+                borderRadius: "5px",
+                padding: "8px 16px",
+                fontSize: "16px",
+                cursor: "pointer",
+                marginTop: "8px",
+              }}>
+
             Submit
           </button>
+        </div>      
+
         </div>
       )}
 
