@@ -7,6 +7,7 @@ import {
 import HomePage from "./pages/HomePage";
 import ArticleCategory from "./pages/ArticleCategory";
 import ArticleDetail from "./pages/ArticleDetail";
+import ArticleDetails from "./pages/ArticleDetails";
 import Quiz from "./pages/Quiz";
 import QuizDetail from "./pages/QuizDetail";
 import QuizSecurity from "./pages/QuizSecurity";
@@ -50,6 +51,10 @@ function App() {
         metaDescription = "";
         break;
       case "/article-detail":
+        title = "Article Details-TOV";
+        metaDescription = "";
+        break;
+      case "/article-details":
         title = "Article Details-TOV";
         metaDescription = "";
         break;
@@ -102,6 +107,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/article-category" element={<ArticleCategory />} />
       <Route path="/article-detail" element={<ArticleDetail />} />
+      <Route path="/article-details" element={<ArticleDetails />} />
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/quiz-detail" element={<QuizDetail />} />
       <Route path="/quiz-security" element={<QuizSecurity />} />
