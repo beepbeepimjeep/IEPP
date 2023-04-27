@@ -30,13 +30,13 @@ function EmailSimulator() {
     setStage(2);
   };
 
-  const submitPayment = () => {
-    if (cardNumber && password) {
+  /* const submitPayment = () => {
+    if (cardNumber && cw) {
       setStage(4);
     } else {
-      alert('Please enter card number and password before submitting');
+      alert('Please Your Infor');
     }
-  };
+  }; */
 
   const goToPayment = (e) => {
     e.preventDefault();
