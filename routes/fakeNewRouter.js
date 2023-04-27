@@ -9,15 +9,15 @@ fakeNewRouter.get("/", async (req,res)=>{
         const resultArray = [];
         if(typeof result === 'object' && Array.isArray(result)){
             for(let i =0; i<result.length; i++){
-
                 const claimResult = {
                     claim: result[i].article_title,
                     result: 'False',
                     url: ''
                 };
                 resultArray.push(claimResult);
-
             }
+            console.log(resultArray);
+            res.json({ resultArray });
         }else{
             const claims = result.claims;
 
@@ -53,11 +53,10 @@ fakeNewRouter.get("/", async (req,res)=>{
                     }
                     //console.log('-------------------------------------');
                 }
-
+                console.log(resultArray);
+                res.json({ resultArray });
             }
         }
-        console.log(resultArray);
-        res.json({ resultArray });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

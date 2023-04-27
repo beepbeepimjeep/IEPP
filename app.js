@@ -10,7 +10,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var sqlRouter = require('./routes/sqlRouter');
 var app = express();
 //enables cors
 app.use(cors());
@@ -27,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/url', urlSearchRouter);
 app.use('/newCheck',fakeNewRouter);
+app.use('/addSQL', sqlRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
