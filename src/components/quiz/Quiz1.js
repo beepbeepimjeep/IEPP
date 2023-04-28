@@ -43,7 +43,7 @@ To start, click the "Start" button. When finished, click the "Submit " button.
                             </div>
                         <div className={`${classes.learnMore}`}>
                         
-                        <BtnPrimary title="START" url="/quiz-security" />
+                        <BtnPrimary title="START" url="/quiz-detail" />
                         </div>
                         </div>
                     </Col>

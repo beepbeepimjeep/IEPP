@@ -86,9 +86,9 @@
 
 .PasswordCheck {
     position: absolute; /* 将元素设置为固定定位 */
-    top: 41%; /* 将元素的顶部定位到页面垂直中心 */
-    left: 48%; /* 将元素的左侧定位到页面水平中心 */
-    transform: translate(-50%, -50%); /* 使用translate将元素向左和向上移动一半的宽度和高度，以使其完全居中 */
+    top: 41%; /* 将元素的顶部定位到页面垂直中�*/
+    left: 48%; /* 将元素的左侧定位到页面水平中�*/
+    transform: translate(-50%, -50%); /* 使用translate将元素向左和向上移动一半的宽度和高度，以使其完全居�*/
     
     height: 205px;
     width: 600px;
@@ -115,7 +115,7 @@
 
 /* 适配Pad设备 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* 在这里写需要适配Pad设备的样式 */
+    /* 在这里写需要适配Pad设备的样�*/
 
     .card {
         height: 350px;
@@ -134,7 +134,7 @@
   
   /* 适配移动设备(H5) */
 @media (max-width: 767px) {
-    /* 在这里写需要适配移动设备的样式 */
+    /* 在这里写需要适配移动设备的样�*/
     .card {
         height: 350px;
         position: absolute;

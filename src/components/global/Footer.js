@@ -24,7 +24,7 @@ function Footer() {
                                         alt="footer-logo"
                                     />
                                     <p className={`${classes.footerText}`}>
-                                        Help Teens to figure out all online security issues.
+                                        Creative Design & Development Agency in Canada.
                                     </p>
                                     <ul
                                         className={`${classes.footerSocialCollections} d-flex gap-3 mt-4`}
@@ -54,36 +54,36 @@ function Footer() {
                                         <Link to="/">About</Link>
                                     </li>
                                     <li>
-                                        <Link to="/">Contact US</Link>
+                                        <Link to="/">UX/UI Design</Link>
                                     </li>
-                                    {/* <li>
-                                        <Link to="/">Contact US</Link>
+                                    <li>
+                                        <Link to="/">Graphic Design</Link>
                                     </li>
                                     <li>
                                         <Link to="/">Business Strategy</Link>
                                     </li>
                                     <li>
                                         <Link to="/">App Development</Link>
-                                    </li> */}
+                                    </li>
                                 </ul>
                             </Col>
                             <Col lg={2} md={6} sm={6} className="mb-4 mb-lg-0">
                                 <h4 className={`${classes.footerLinkTitle}`}>Services</h4>
                                 <ul className={`${classes.footerLinkCollections}`}>
                                     <li>
-                                        <Link to="/article-category">Articles</Link>
+                                        <Link to="/blog">Blog</Link>
                                     </li>
                                     <li>
                                         <Link to="/services">Service</Link>
                                     </li>
                                     <li>
-                                        <Link to="/DetectPageNew">Detect</Link>
+                                        <Link to="/portfolioTwo">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <Link to="/simulator-page">Simulator</Link>
+                                        <Link to="/pricing">Pricing Plan</Link>
                                     </li>
                                     <li>
-                                        <Link to="/quiz">Quiz</Link>
+                                        <Link to="/conatact">Contact Us</Link>
                                     </li>
                                 </ul>
                             </Col>
@@ -100,13 +100,13 @@ function Footer() {
                                         <span>
                                             <BsPhone />
                                         </span>
-                                        +61 3 9902 XXXX
+                                        1-976-1178-9535
                                     </li>
                                     <li>
                                         <span>
                                             <MdAlternateEmail />
                                         </span>
-                                        Hello@TrustOnlineVictoria.com
+                                        hello.Ajux@gmail.com
                                     </li>
                                 </ul>
                             </Col>
@@ -114,7 +114,7 @@ function Footer() {
                     </div>
                     <div className="divider" />
                     <div className={`${classes.footerBottom} d-grid justify-content-center`}>
-                        <p> Trust Online Victoria , 2023 </p>
+                        <p>Copyright Ajux 2023, All Rights Reserved By devsarray </p>
                     </div>
                 </Container>
             </div>

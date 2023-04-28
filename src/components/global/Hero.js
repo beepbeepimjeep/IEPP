@@ -91,7 +91,7 @@ function Hero() {
                                 
                             </p>
                             <BtnPrimary url="/article-category" title="Learn More About internet fraud" />
-                            <BtnPrimary url="/detect-page" title="Detect Web URL for free" />
+                            <BtnPrimary url="/DetectPageNew" title="Detect Web URL for free" />
 
                         </div>
                     </Col>
