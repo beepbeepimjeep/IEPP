@@ -76,25 +76,7 @@ const DetectPageNew = () => {
                         </div>
                       </div>
 
-                      {/* <div className="buttonsecondary1">
-                  <div
-                    className="iconlybulksend-parent"
-                    onClick={HandleshowPasswordCheck}
-                  >
-                    <img
-                      className="iconlybulksend"
-                      alt=""
-                      src="/iconlybulksend1.svg"
-                    />
-                    <i className="label3">Password checker</i>
-                  </div>
-                </div> */}
-
-                      {/* Detect password strength */}
-
-                      {/* <div className="buttontertiary pswchecker" onClick={HandleshowPasswordCheck}>
-                  <Button className="primary" variant="info">Password checker</Button>
-                </div> */}
+                      
                     </div>
                   </div>
                   {isLoading ? <div className="spinner"></div> : null}
@@ -171,10 +153,10 @@ const DetectPageNew = () => {
                           }
                         }}
                       />
-                      <div className="buttonsecondary1">
+                      <div className="buttonsecondary1" onClick={handleArticleSubmit}>
                         <div
                           className="iconlybulksend-parent"
-                          onClick={handleArticleSubmit}
+                          // onClick={handleArticleSubmit}
                         >
                           <img
                             className="iconlybulksend"
@@ -265,14 +247,25 @@ const DetectPageNew = () => {
                             Access
                           </Button> */}
 
-                          <Button variant="secondary" size="sm" href={item.url} target="_blank">
+                          {item.url?
+                            (<div><Button variant="secondary" size="sm" href={item.url} target="_blank">
                             Access
                           </Button>
+                          
+                          </div>  ): <br></br>
+                          
+                          }
+
+                          {/* <Button variant="secondary" size="sm" href={item.url} target="_blank">
+                            Access
+                          </Button> */}
+
                           </li>
                         ))}
                       </ul>
                     ) : (
-                      <p>No results found</p>
+                      // <p>No results found</p>
+                      null
                     )}
                   </div>
 
@@ -359,35 +352,57 @@ const DetectPageNew = () => {
     setUrlError("");
   };
   // handle artcile submit
-  const handleArticleSubmit = async () => {
-    console.log("Submitted Keywords:", articleInput);
-    const articleResult = await searchArticle(articleInput);
-    console.log("Article result is ", articleResult);
-    // console.log(articleResult);
-    setArticleResult(articleResult);
-    // console.log("Article result is "+ articleResult);
+  // const handleArticleSubmit = async () => {
+  //   console.log("Submitted Keywords:", articleInput);
+  //   const articleResult = await searchArticle(articleInput);
+  //   console.log("Article result is ", articleResult);
+  //   // console.log(articleResult);
+  //   setArticleResult(articleResult);
+  //   // console.log("Article result is "+ articleResult);
 
+  //   if (articleInput === "") {
+  //     window.confirm("Please enter your keywords/ Article Title");
+  //     return;
+  //   } else {
+  //     setIsLoading(true); // 设置为正在加载状态
+  //     try {
+  //       // const articleResult = await searchArticle(articleInput);
+  //       // console.log(articleResult);
+  //       // // searchArticle(result);
+  //       // setArticleResult(articleResult);
+  //       console.log("Submitted Keywords:", articleInput);
+  //       const articleResult = await searchArticle(articleInput);
+  //       console.log("Article result is ", articleResult);
+  //       // console.log(articleResult);
+  //       setArticleResult(articleResult);
+  //     } catch (error) {
+  //       console.error(error);
+  //     } finally {
+  //       setIsLoading(false); // 加载完成后设置为非加载状态
+  //     }
+  //   }
+  //   // Send URL to backend
+  //   setArticleInput("");
+  //   setArticleError("");
+  // };
+  const handleArticleSubmit = async () => {
     if (articleInput === "") {
-      window.alert("Please enter your keywords/ Article Title");
+      const confirmed = window.confirm("Please enter your keywords/ Article Title");
+      if (!confirmed) {
+        return; // 用户点击了“取消”按钮，停止执行后续的代码
+      }
     } else {
-      setIsLoading(true); // 设置为正在加载状态
+      setIsLoading(true);
       try {
-        // const articleResult = await searchArticle(articleInput);
-        // console.log(articleResult);
-        // // searchArticle(result);
-        // setArticleResult(articleResult);
-        console.log("Submitted Keywords:", articleInput);
         const articleResult = await searchArticle(articleInput);
         console.log("Article result is ", articleResult);
-        // console.log(articleResult);
         setArticleResult(articleResult);
       } catch (error) {
         console.error(error);
       } finally {
-        setIsLoading(false); // 加载完成后设置为非加载状态
+        setIsLoading(false);
       }
     }
-    // Send URL to backend
     setArticleInput("");
     setArticleError("");
   };
@@ -410,21 +425,7 @@ const DetectPageNew = () => {
         smTitle="Tools"
         breadcrumb="Home / Detect"
       />
-      {/* <div className="container mt-3">
-
-        <Nav justify variant="tabs" defaultActiveKey="/home">
-          <Nav.Item >
-            <Nav.Link href="/home">Detect URL</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-1">Detect Article</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2">Detect Password</Nav.Link>
-          </Nav.Item>
-        </Nav>
-
-      </div> */}
+      
 
       <Container className="mt-3">
         <Nav

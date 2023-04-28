@@ -14,13 +14,13 @@ const ArticleDetails = () => {
               {/* <!-- Post header--> */}
               <header class="mb-4">
                 {/* <!-- Post title--> */}
-                <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1>
+                <h1 class="fw-bolder mb-1">Scammers use AI to enhance their family emergency schemes</h1>
                 {/* <!-- Post meta content--> */}
                 <div class="text-muted fst-italic mb-2">
-                  Posted on January 1, 2023 by Start Bootstrap
+                  Posted on March 20, 2023 | By Alvaro Puig
                 </div>
                 {/* <!-- Post categories--> */}
-                <a
+                {/* <a
                   class="badge bg-secondary text-decoration-none link-light"
                   href="#!"
                 >
@@ -31,38 +31,42 @@ const ArticleDetails = () => {
                   href="#!"
                 >
                   Freebies
-                </a>
+                </a> */}
               </header>
               {/* <!-- Preview image figure--> */}
               <figure class="mb-4">
                 <img
-                  class="img-fluid rounded"
-                  src="https://dummyimage.com/900x400/ced4da/6c757d.jpg"
+                  class="img-fluid rounded articleImageFormat"
+                  // src="https://dummyimage.com/900x400/ced4da/6c757d.jpg"
+                  src="./familyscam.png"
                   alt="..."
                 />
               </figure>
               {/* <!-- Post content--> */}
               <section class="mb-5">
                 <p class="fs-5 mb-4">
-                  Science is an enterprise that should be cherished as an
-                  activity of the free human mind. Because it transforms who we
-                  are, how we live, and it gives us an understanding of our
-                  place in the universe.
+                Artificial intelligence is no longer a far-fetched idea out of a
+                sci-fi movie. We're living with it, here and now. A scammer
+                could use AI to clone the voice of your loved one. All he needs
+                is a short audio clip of your family member's voice — which he
+                could get from content posted online — and a voice-cloning
+                program. When the scammer calls you, he’ll sound just like your
+                loved one.
                 </p>
                 <p class="fs-5 mb-4">
-                  The universe is large and old, and the ingredients for life as
-                  we know it are everywhere, so there's no reason to think that
-                  Earth would be unique in that regard. Whether of not the life
-                  became intelligent is a different question, and we'll see if
-                  we find that.
+                So how can you tell if a family member is in trouble or if it’s
+                a scammer using a cloned voice?
                 </p>
                 <p class="fs-5 mb-4">
-                  If you get asteroids about a kilometer in size, those are
-                  large enough and carry enough energy into our system to
-                  disrupt transportation, communication, the food chains, and
-                  that can be a really bad day on Earth.
+                Don’t trust the voice. Call the person who supposedly contacted
+                you and verify the story. Use a phone number you know is theirs.
+                If you can’t reach your loved one, try to get in touch with them
+                through another family member or their friends.
                 </p>
-                <h2 class="fw-bolder mb-4 mt-5">
+                <p class="fs-5 mb-4">
+                Scammers ask you to pay or send money in ways that make it hard to get your money back. If the caller says to wire money, send cryptocurrency, or buy gift cards and give them the card numbers and PINs, those could be signs of a scam.
+                </p>
+                {/* <h2 class="fw-bolder mb-4 mt-5">
                   I have odd cosmic thoughts every day
                 </h2>
                 <p class="fs-5 mb-4">
@@ -76,7 +80,7 @@ const ArticleDetails = () => {
                   without knowing the consequences of it. Mars once had running
                   water. It's bone dry today. Something bad happened there as
                   well.
-                </p>
+                </p> */}
               </section>
             </article>
           </div>

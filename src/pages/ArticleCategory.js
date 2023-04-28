@@ -18,11 +18,11 @@ function Services() {
   return (
       <>
         <Header />
-          <Banner
+          {/* <Banner
               pageTitle="Useful information to help you stay safe online. "
               smTitle="Article Category"
               breadcrumb="Home / Article"
-          />
+          /> */}
           <AboutSerivces />
           <Article2/>
           <Article3/>

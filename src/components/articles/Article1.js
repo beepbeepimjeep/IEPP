@@ -38,7 +38,7 @@ function AboutSerivces() {
                             </div>
                         <div className={`${classes.learnMore}`}>
                         
-                        <BtnPrimary title="Learn More" url="/article-detail" />
+                        <BtnPrimary title="Learn More" url="/article-details" />
                         </div>
                         </div>
                     </Col>

@@ -110,6 +110,7 @@
     color: black;
     overflow: auto;
     height: 100px;
+    width: 100%;
 }
 
 /* 适配Pad设备 */
