@@ -37,7 +37,7 @@ function EmailSimulator() {
     } else {
       alert('Please fill in all fields.');
     }
-  }; */
+  }; 
 
   const goToPayment = (e) => {
     e.preventDefault();
@@ -339,22 +339,21 @@ function EmailSimulator() {
             Report
           </h3>
           <p style={{ fontSize: '18px', fontWeight: 'bold' }}>
-            You have made the following mistakes during the simulation:
+            Keys to identify phishing emails:
           </p>
           <ul style={{ fontSize: '16px', paddingLeft: '20px' }}>
             <li>
-              1. You did not recognize the incorrect sender.
+              1. Check the sender's email address.
             </li>
             <li>
-              2. You easily clicked on the incorrect link.
+              2. Check any links included in the email.
             </li>
             <li>
-              3. You entered your card number and password without verifying
-              the source.
+              3. When entering sensitive information, please verify the source
             </li>
           </ul>
           <p style={{ fontSize: '18px', fontWeight: 'bold', marginTop: '15px' }}>
-            Please be more cautious in the future.
+            <a href='/article-category' style={{hover: 'color: blue'}}>To read more information about this</a>
           </p>
         </div>
       )}
