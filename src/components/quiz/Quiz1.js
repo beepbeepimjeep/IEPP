@@ -34,7 +34,7 @@ function AboutSerivces() {
                                 <p>
                                 This quiz consists of 5 multiple-choice questions. To be successful with the quizzes, it’s important to conversant with the topics. Keep the following in mind:
 
-Timing - You need to complete each of your attempts in one sitting, as you are allotted 30 minutes to each attempt.
+Timing - You need to complete each of your attempts in one sitting, as you are allocated 30 minutes to each attempt.
 
 Answers - You may review your answer-choices and compare them to the correct answers after your final attempt.
 
@@ -43,7 +43,7 @@ To start, click the "Start" button. When finished, click the "Submit " button.
                             </div>
                         <div className={`${classes.learnMore}`}>
                         
-                        <BtnPrimary title="START" url="/quiz-detail" />
+                        <BtnPrimary title="START" url="/quiz-security" />
                         </div>
                         </div>
                     </Col>

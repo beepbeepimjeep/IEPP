@@ -67,7 +67,8 @@ function EmailSimulator() {
             <p className="lead">We want to mimic a real life situation here</p>
             <p className="lead">Here you will be presented with series of emails and try to interact with them as if they were real</p>
             <p className="lead">Your goal is to reach the end and identify different ways you are able to tell a spam email from a good email</p>
-            <p className="lead">Good luck and have fun</p>
+            <br></br>
+            <p className="lead">Good luck and have fun!</p>
           </div>
         </div>
         <div className="row justify-content-center">

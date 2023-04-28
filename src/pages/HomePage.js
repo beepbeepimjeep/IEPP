@@ -34,7 +34,7 @@ const HomePage = () => {
       <Banner 
         pageTitle="Find Potential Fraud"
         smTitle="Trust online Victoria"
-        breadcrumb="Home"
+        breadcrumb=""
       />
       <Hero />
       {/* <div className="buttons">

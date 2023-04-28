@@ -422,7 +422,7 @@ const DetectPageNew = () => {
       <Banner
         // pageTitle="Tools empower yourself "
         smTitle="Tools"
-        breadcrumb="Detect"
+        breadcrumb="Home / Detect"
       />
       
 
