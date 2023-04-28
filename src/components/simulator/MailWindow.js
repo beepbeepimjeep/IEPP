@@ -30,13 +30,13 @@ function EmailSimulator() {
     setStage(2);
   };
 
-  /* const submitPayment = () => {
+  const submitPayment = () => {
     if (cardNumber && cw) {
       setStage(4);
     } else {
       alert('Please Your Infor');
     }
-  }; */
+  }; 
 
   const goToPayment = (e) => {
     e.preventDefault();
@@ -209,7 +209,7 @@ function EmailSimulator() {
           <p>However, keep in mind that constantly updating the tracking number will not speed up the delivery of your package.
             Estimated shipping: ~ 1 - 2 days
             The order is being prepared for shipment and your confirmation is required.</p>
-          <button className='alert' onClick={goToPayment} style={{fontWeight: 'bold'}}>Click to Tract Your Order  
+          <button className='alert' onClick={goToPayment} style={{fontWeight: 'bold'}}>Click to Track Your Order  
             <FontAwesomeIcon icon={faArrowRight} style={{paddingLeft: '10px'}}/>
           </button>
           <p>Best regards,</p>

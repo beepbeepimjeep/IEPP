@@ -154,14 +154,13 @@ const DetectPageNew = () => {
               <Card.Body>
                 <Card.Title>Detect Article</Card.Title>
                 <div className="title-text1">
-                  <h3 className="">Detect the Articles</h3>
-
+                  <h3 className="">Fact Check</h3>
                   <div className="inputsearch">
                     <div className="inputsearch-child" />
                     <div className="label-parent">
                       <input
                         className="InputUrl"
-                        placeholder="Enter the Article Title"
+                        placeholder="Enter news keyword"
                         value={articleInput}
                         onChange={handleArticleInputChange}
                         onKeyPress={(event) => {
@@ -440,7 +439,7 @@ const DetectPageNew = () => {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="link-1">
-              <p>Detect Article</p>
+              <p>Detect News / Fact</p>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
