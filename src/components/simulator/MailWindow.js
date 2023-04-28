@@ -15,6 +15,7 @@ function EmailSimulator() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [cw, setCw] = useState('');
+  const [expirationDate, setexpirationDate] = useState('');
   const [activeTab, setActiveTab] = useState("primary");
 
   const packageCode = Math.floor(Math.random() * 1000000);
@@ -34,9 +35,9 @@ function EmailSimulator() {
     if (cardNumber && cw) {
       setStage(4);
     } else {
-      alert('Please Your Infor');
+      alert('Please fill in all fields.');
     }
-  }; 
+  }; */
 
   const goToPayment = (e) => {
     e.preventDefault();
@@ -223,10 +224,10 @@ function EmailSimulator() {
         <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <h4>package Code</h4>
+            <h4>Package Code</h4>
           </div>
           <div className="col-md-6">
-            <h4>{packageCode}</h4>
+            <h4>AG001962212CN</h4>
           </div>
         </div>
 
@@ -241,6 +242,8 @@ function EmailSimulator() {
             className="form-control"
             placeholder="First Name"
             required
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
         <div className="col-md-6">
@@ -253,6 +256,8 @@ function EmailSimulator() {
             className="form-control"
             placeholder="Last Name"
             required
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
           />
         </div>
         </div>
@@ -268,6 +273,8 @@ function EmailSimulator() {
             className="form-control"
             placeholder="Card Number"
             required
+            value={cardNumber}
+            onChange={(e) => setCardNumber(e.target.value)}
           />
         </div>
         <div className="col-md-6">
@@ -280,6 +287,8 @@ function EmailSimulator() {
             className="form-control"
             placeholder="CW"
             required
+            value={cw}
+            onChange={(e) => setCw(e.target.value)}
           />
         </div>
 
@@ -301,9 +310,12 @@ function EmailSimulator() {
             className="form-control"
             placeholder="MM/YY"
             required
+            value={expirationDate}
+            onChange={(e) => setexpirationDate(e.target.value)}
           />
         </div>
-        <button className="btn" onClick={submitPayment} style={{
+        <button className="btn" onClick={submitPayment} 
+        style={{
                 backgroundColor: "#007bff",
                 borderColor: "#007bff",
                 color: "#fff",
@@ -321,23 +333,33 @@ function EmailSimulator() {
         </div>
       )}
 
-    {stage === 4 && (
+      {stage === 4 && (
         <div className="report content-spacing">
-          <h3>Report</h3>
-          <p>
+          <h3 style={{ borderBottom: '1px solid #333', paddingBottom: '10px' }}>
+            Report
+          </h3>
+          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>
             You have made the following mistakes during the simulation:
           </p>
-          <ul>
-            <li>You did not recognize the incorrect sender.</li>
-            <li>You easily clicked on the incorrect link.</li>
-            <li>You entered your card number and password without verifying the source.</li>
+          <ul style={{ fontSize: '16px', paddingLeft: '20px' }}>
+            <li>
+              1. You did not recognize the incorrect sender.
+            </li>
+            <li>
+              2. You easily clicked on the incorrect link.
+            </li>
+            <li>
+              3. You entered your card number and password without verifying
+              the source.
+            </li>
           </ul>
-          <p>Please be more cautious in the future.</p>
+          <p style={{ fontSize: '18px', fontWeight: 'bold', marginTop: '15px' }}>
+            Please be more cautious in the future.
+          </p>
         </div>
       )}
-
-  </div>
-);
+    </div>
+  );
 }
           
 export default EmailSimulator;
