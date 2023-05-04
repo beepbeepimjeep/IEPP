@@ -105,7 +105,7 @@ const DetectPageNew = () => {
                           ))}
 
                         {urlResult.result && urlResult.result[1] !== null && (
-                          <div className="url-type">
+                          <div className="url-type" style={{ color: "black" }}>
                             This Website might be -{" "}
                             {urlResult.result[1][0].urlType} site
                           </div>
