@@ -17,6 +17,7 @@ import DetectPageNew from "./pages/DetectPageNew";
 import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SimulatorPage from "./pages/SimulatorPage";
+import Oauth from "./pages/Oauth";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import font awesome
@@ -115,6 +116,7 @@ function App() {
       <Route path="/back-up" element={<BackUp />} />
       <Route path="/DetectPageNew" element={<DetectPageNew />} />
       <Route path="/simulator-page" element={<SimulatorPage />} />
+      <Route path="/login" element={<Oauth/>}/>
     </Routes>
   );
 }
