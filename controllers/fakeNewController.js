@@ -36,7 +36,8 @@ const fakeNewChecker = async (news)=>{
             return resultDb;
         } else {
             try {
-                const response = await axios.get(`https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${apiKey}&query=${claim}`);
+                const languageCode = 'en';
+                const response = await axios.get(`https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${apiKey}&query=${claim}&languageCode=${languageCode}`);
                 return response.data;
             } catch (error) {
                 console.log(error);
