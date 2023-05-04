@@ -54,7 +54,7 @@ const urlSearch = async (domain) => {
                     });
                 }),
                 new Promise((resolve, reject) => {
-                    connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' `, (err, results) => {
+                    connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' LIMIT 5`, (err, results) => {
                         if (err) reject(err);
                         else resolve(results);
                     });

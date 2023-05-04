@@ -48,8 +48,6 @@ const fakeNewChecker = async (news)=>{
         console.log("Error: " + error);
         return null;
     }
-
-
     /*try{
         const data = axios.get(`https://factchecktools.googleapis.com/v1alpha1/claims:search?key=${apiKey}&query=${claim}`)
             .then(response => {
@@ -65,7 +63,6 @@ const fakeNewChecker = async (news)=>{
         console.log(error)
         return null;
     }*/
-
 }
 
 module.exports = {
