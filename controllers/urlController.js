@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const urlSearch = async (domain) => {
     const connection = mysql.createPool({
-        host: '34.129.14.82',
+        host: '34.129.245.42',
         port: 3306,
         user: 'root',
         password: '012ebecbd6b870d3',

@@ -7,7 +7,7 @@ const fakeNewChecker = async (news)=>{
     const claimLength = claim.length;
     const apiKey = process.env["GOOGLE_LOOKUP_API"];
     const connection = mysql.createConnection({
-        host: '34.129.14.82',
+        host: '34.129.245.42',
         port: 3306,
         user: 'root',
         password: '012ebecbd6b870d3',
