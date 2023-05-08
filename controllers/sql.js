@@ -34,7 +34,7 @@ const createFunction = async (req, res) => {
         {
             ID: '4',
             Title: 'Teens, Tweens and Technology 2015',
-            Desc: 'the online behavior of teens and tweens, and the risks they face from malware and other threats.',
+            Desc: 'The online behavior of teens and tweens, and the risks they face from malware and other threats.',
             URL: 'https://www.mcafee.com/blogs/consumer/family-safety/teens-tweens-technology-2015-report/',
             Type: 'Virus and malware removal'
         },
@@ -91,8 +91,29 @@ const createFunction = async (req, res) => {
             ID: '12',
             Title: 'Online Harassment, School Violence, and Perceived School Safety: An Examination of Their Association with Mental Health Outcomes Among Adolescents in Taiwan',
             Desc: 'The relationship between online harassment, school violence, perceived school safety, and mental health outcomes among adolescents in Taiwan.',
-            URL: 'https://us.norton.com/internetsecurity-kids-safety-kids-and-malware-what-you-need-to-know.html',
-            Type: 'https://www.mdpi.com/1660-4601/15/8/1631'
+            URL: 'https://www.mdpi.com/1660-4601/15/8/1631',
+            Type: 'Bullying and harassment'
+        },
+        {
+            ID: '13',
+            Title: 'Password Security: A Case Study of Online Habits',
+            Desc: 'Password security among young adults and highlights the need for better education and awareness of safe online practices.',
+            URL: 'https://www.jstor.org/stable/26296820',
+            Type: 'Password'
+        },
+        {
+            ID: '14',
+            Title: 'Teens, Social Media & Technology Overview 2015',
+            Desc: 'The online habits and behaviors of teenagers, including their password security practices',
+            URL: 'https://www.pewresearch.org/internet/2015/04/09/teens-social-media-technology-2015/',
+            Type: 'Password'
+        },
+        {
+            ID: '15',
+            Title: `Protecting Teenagers' Online Identities: A Critical Literature Review`,
+            Desc: `Review examines the risks and challenges associated with protecting teenagers' online identities, including password security.`,
+            URL: 'https://journals.sagepub.com/doi/full/10.1177/1461444816686326',
+            Type: 'Password'
         }
     ];
 
@@ -104,29 +125,31 @@ const createFunction = async (req, res) => {
         console.log('Connected as id ' + connection.threadId);
 
         // Create table query
-        const createTableQuery = `
-      CREATE TABLE IF NOT EXISTS articleList (
+        /*const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS articleNewList (
         ID INT,
         Title VARCHAR(255),
         \`Desc\` VARCHAR(255),
         URL VARCHAR(255),
         Type VARCHAR(255)
       );
+    `;*/
+        const query = `
+      DROP TABLE IF EXISTS articleList;
     `;
-
         const insertQueries = articles.map((article) => {
             return `
-        INSERT INTO articleList (ID, Title, \`Desc\`, URL, Type)
+        INSERT INTO articleNewList (ID, Title, \`Desc\`, URL, Type)
         VALUES ('${article.ID}', '${article.Title}', '${article.Desc}', '${article.URL}', '${article.Type}');
       `;
         });
 
-        connection.query(createTableQuery, (err) => {
+        connection.query(query, (err) => {
             if (err) {
                 console.error('Error creating table: ' + err.stack);
                 return;
             }
-            console.log('Table created');
+            console.log('Table deleted');
 
             // Execute the insert queries in a loop
             const executeInsertQueries = () => {
