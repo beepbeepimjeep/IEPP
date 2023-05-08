@@ -1,6 +1,8 @@
 require('./model/index');
 const urlSearchRouter = require('./routes/urlSearchRouter');
 const fakeNewRouter = require('./routes/fakeNewRouter');
+const chatRouter = require('./routes/chatRouter');
+const articleRouter = require('./routes/articleRouter');
 const cors = require('cors');
 var createError = require('http-errors');
 var express = require('express');
@@ -28,6 +30,8 @@ app.use('/users', usersRouter);
 app.use('/url', urlSearchRouter);
 app.use('/newCheck',fakeNewRouter);
 app.use('/addSQL', sqlRouter);
+app.use('/chat', chatRouter);
+app.use('/getArticle', articleRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
