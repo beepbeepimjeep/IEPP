@@ -11,6 +11,7 @@ import Header from "../components/global/Header";
 import Banner from "../components/global/Banner";
 import Footer from "../components/global/Footer";
 import Hero from "../components/global/Hero";
+import ArticleList from '../components/articles/ArticleList';
 
 function Services() {
   // Title dynamic
@@ -23,10 +24,11 @@ function Services() {
               smTitle="Article Category"
               breadcrumb="Home / Article"
           /> */}
-          <AboutSerivces />
+          <ArticleList/>
+         {/*  <AboutSerivces />
           <Article2/>
           <Article3/>
-          <Article4/>
+          <Article4/> */}
 
           <Footer />
       </>

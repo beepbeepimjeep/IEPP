@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import './EmailSimulator.css';
 import { Tab, Tabs, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInbox, faPaperclip, faTag, faUsers, faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import { faInbox, faPaperclip, faTag, faUsers, faArrowRight,faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import {faStar} from '@fortawesome/free-regular-svg-icons'
+
 
 const CardIcon = require('../../assets/img/credit-card-icons.png');
 
@@ -83,20 +84,7 @@ function EmailSimulator() {
       )}
 
     {stage === 1 && (
-        /*<ul className="email-list">
-          {fakeEmails.map((email) => (
-            <li
-              key={email.id}
-              className="email-list-item"
-              onClick={() => openEmail(email)}
-            >
-            <div>
-              <strong>{email.from}</strong>
-            </div>
-            <div>{email.subject}</div>
-            </li>
-        ))}
-      </ul>*/
+    
       <div className="container">
       <Tab.Container activeKey={activeTab} onSelect={handleTabChange}>
         <Nav variant="tabs" className="mb-3 pageNav">
@@ -127,11 +115,19 @@ function EmailSimulator() {
                 <span className="name" style={{ minWidth: "200px", display: "inline-block",  marginRight: '5px', fontWeight: 'bold'}}>AU-servicePOst!</span>
                 <span className="title" style={{marginRight: '10px', fontWeight: 'bold'}}>VERiFiCatiOn-990031</span>
                 <span className="text-muted" style={{ fontSize: "11px", marginRight: '10px', alignSelf: "center"}}> - #meera20040517</span>
-                <span className="rightItem badge">12:10 AM</span>
+
+                
                 <span className="pull-right">
+                <button className="btn" style={{ backgroundColor: "blue", color: "white", borderRadius: "30%", border: "none", marginRight: "10px", width: "50px", height: "40px" }}>
+                <FontAwesomeIcon icon={faArrowLeft} style={{ transform: 'translateY(-5px)', alignSelf: "center", marginRight: '10px'}}/>
+                  </button>
+                  <span style={{ alignSelf: "center" }}>Click here</span>
+                </span>  
+                <span className="rightItem badge">12:10 AM</span>
                   <FontAwesomeIcon icon={faPaperclip} />
-                </span>
               </a>
+
+
               <a href="#" className="list-group-item emailElement" style={{display: 'flex'}}>
                   <label style={{marginRight: '10px'}}>
                     <input type="checkbox" />
