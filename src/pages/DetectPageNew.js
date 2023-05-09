@@ -96,13 +96,13 @@ const DetectPageNew = () => {
                     <div className="url-result">
                       <div className="result-title">Results:</div>
                       <ul>
-                        {urlResult.result &&
+                        {/* {urlResult.result &&
                           urlResult.result[0] &&
                           urlResult.result[0].map((item, index) => (
                             <li className="result-item" key={index}>
                               {item}
                             </li>
-                          ))}
+                          ))} */}
 
                         {urlResult.result && urlResult.result[1] !== null && (
                           <div className="url-type" style={{ color: "black" }}>

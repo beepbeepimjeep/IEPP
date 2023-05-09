@@ -28,6 +28,7 @@
 
 .QuizTitle {
   margin: 0;
+  font-size: x-large;
 }
 .QuizContainer {
   line-break: anywhere;

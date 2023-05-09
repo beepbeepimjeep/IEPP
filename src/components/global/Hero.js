@@ -83,20 +83,20 @@ function Hero() {
                                 Welcome to <span>Ajux</span>
                             </p> */}
                             <h1 className={`${classes.heroTitle} mobile-hide`}>
-                                How much you know about password Security
+                                How much you know about online security
                             </h1>
-                            {/* <p className={classes.heroText}>
+                            <p className={classes.heroText}>
                                 Here is some articles about online security, explore by below button.<br/>
                                 A great Tool for you to detect Web URL with simple click.
                                 
-                            </p> */}
-                            <p className={classes.heroText}>
+                            </p>
+                            {/* <p className={classes.heroText}>
                                 Here is some tools about password security, explore by below button.<br/>
                                 A great Tool for you to Strong your password with simple click.
                                 
-                            </p>
+                            </p> */}
                             {/* hide the article button */}
-                            {/* <BtnPrimary url="/article-category" title="Learn More About internet fraud" /> */}
+                            <BtnPrimary url="/article-category" title="Learn More About internet fraud" />
                             <BtnPrimary url="/DetectPageNew" title="Detect Web URL/Passwords for free" />
 
                         </div>
