@@ -21,7 +21,7 @@ const getArticleByType = async (type) => {
             }
             console.log('Connected as id ' + connection.threadId);
 
-            const query = `SELECT * FROM articleNewList WHERE Type = '${type}';`;
+            const query = `SELECT * FROM articleList WHERE Type = '${type}';`;
 
             connection.query(query, (err, results) => {
                 if (err) {

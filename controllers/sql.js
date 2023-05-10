@@ -19,9 +19,9 @@ const createFunction = async (req, res) => {
         },
         {
             ID: '2',
-            Title: 'Phishing in a Teenager’s World: An Analysis of Phishing Websites Targeting Teenagers',
-            Desc: 'Phishing websites that specifically target teenagers and the methods used to trick them into providing sensitive information',
-            URL: 'https://www.sciencedirect.com/science/article/pii/S2405452618305229',
+            Title: 'Investigating Teenagers’ Ability to Detect Phishing Messages',
+            Desc: 'Young people are increasingly becoming responsible for the security of their devices, yet do not appear to receive formal instruction on how to protect themselves online.',
+            URL: 'https://ieeexplore.ieee.org/abstract/document/9229735',
             Type: 'Phishing'
         },
         {
@@ -33,23 +33,23 @@ const createFunction = async (req, res) => {
         },
         {
             ID: '4',
-            Title: 'Teens, Tweens and Technology 2015',
-            Desc: 'The online behavior of teens and tweens, and the risks they face from malware and other threats.',
-            URL: 'https://www.mcafee.com/blogs/consumer/family-safety/teens-tweens-technology-2015-report/',
+            Title: 'A survey of emerging threats in cybersecurity',
+            Desc: 'The exponential growth of the Internet interconnections has led to a significant growth of cyber attack incidents often with disastrous and grievous consequences.',
+            URL: 'https://www.sciencedirect.com/science/article/pii/S0022000014000178',
             Type: 'Virus and malware removal'
         },
         {
             ID: '5',
-            Title: 'Kids and Malware: What You Need to Know',
-            Desc: 'The prevalence of malware and other online threats that kids face, and how parents can protect their children.',
-            URL: 'https://us.norton.com/internetsecurity-kids-safety-kids-and-malware-what-you-need-to-know.html',
+            Title: 'Social Engineering Attacks: A Survey',
+            Desc: 'The advancements in digital communication technology have made communication between humans more accessible and instant.',
+            URL: 'https://www.mdpi.com/1999-5903/11/4/89',
             Type: 'Virus and malware removal'
         },
         {
             ID: '6',
-            Title: 'The Dangers of Malware: Why Your Teenager Needs to Be Protected',
-            Desc: 'The risks of malware to teenagers, and offering tips on how parents can keep their children safe online.',
-            URL: 'https://www.bark.us/blog/dangers-malware-teenager-needs-protected/',
+            Title: 'Internet Safety for Kids: How to Protect Your Child from the Top 7 Dangers They Face Online',
+            Desc: 'The internet can be a dangerous neighborhood for everyone, but children and teens are especially vulnerable.',
+            URL: 'https://usa.kaspersky.com/resource-center/threats/top-seven-dangers-children-face-online',
             Type: 'Virus and malware removal'
         },
         {
@@ -61,9 +61,9 @@ const createFunction = async (req, res) => {
         },
         {
             ID: '8',
-            Title: 'Identity Theft: A Comprehensive Overview',
-            Desc: 'Various types of identity theft, how to detect it, and steps to take if victimized.',
-            URL: 'https://www.ftc.gov/system/files/documents/reports/identity-theft-comprehensive-overview-report.pdf',
+            Title: 'Why you Should Watch Out for Teen Identity Theft',
+            Desc: ' No one is immune to identity theft, even young children and teens. Typically, criminals target those who are less likely to be aware of teen identity theft, so criminals can ride the money train for as long as possible.',
+            URL: 'https://www.idstrong.com/sentinel/why-you-should-watch-out-for-teen-identity-theft/',
             Type: 'Identity theft'
         },
         {
@@ -82,9 +82,9 @@ const createFunction = async (req, res) => {
         },
         {
             ID: '11',
-            Title: 'Prevalence and Patterns of Sexting Among Ethnic, Racial, and Sexual Minorities',
-            Desc: 'The prevalence and patterns of sexting among adolescents from ethnic, racial, and sexual minority groups, and the potential negative consequences of sexting.',
-            URL: 'https://journals.sagepub.com/doi/abs/10.1177/1557988317714155',
+            Title: 'Cyberbullying Victimization and Problematic Internet Use Among Adolescents: The Moderating Effect of Peer Support',
+            Desc: 'Peer support may mitigate the negative effects of cyberbullying and problematic internet use in adolescents. ',
+            URL: 'https://www.researchgate.net/publication/342337761_Cyberbullying_victimization_and_problematic_Internet_use_among_Chinese_adolescents_Longitudinal_mediation_through_mindfulness_and_depression',
             Type: 'Bullying and harassment'
         },
         {
@@ -110,9 +110,9 @@ const createFunction = async (req, res) => {
         },
         {
             ID: '15',
-            Title: `Protecting Teenagers' Online Identities: A Critical Literature Review`,
-            Desc: `Review examines the risks and challenges associated with protecting teenagers' online identities, including password security.`,
-            URL: 'https://journals.sagepub.com/doi/full/10.1177/1461444816686326',
+            Title: 'Two studies of the perceptions of risk, benefits and likelihood of undertaking password management behaviours',
+            Desc: 'Passwords remain the most common form of authentication in the digital world. People have increasing numbers of passwords, and many people undertake risky password management behaviours such as re-using passwords, writing them down and sharing them.',
+            URL: 'https://www.tandfonline.com/doi/full/10.1080/0144929X.2021.2019832',
             Type: 'Password'
         }
     ];
@@ -125,26 +125,26 @@ const createFunction = async (req, res) => {
         console.log('Connected as id ' + connection.threadId);
 
         // Create table query
-        /*const createTableQuery = `
-      CREATE TABLE IF NOT EXISTS articleNewList (
+        const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS articleList (
         ID INT,
         Title VARCHAR(255),
         \`Desc\` VARCHAR(255),
         URL VARCHAR(255),
         Type VARCHAR(255)
       );
-    `;*/
-        const query = `
-      DROP TABLE IF EXISTS articleList;
     `;
+        /*const query = `
+      DROP TABLE IF EXISTS articleList;
+    `;*/
         const insertQueries = articles.map((article) => {
             return `
-        INSERT INTO articleNewList (ID, Title, \`Desc\`, URL, Type)
+        INSERT INTO articleList (ID, Title, \`Desc\`, URL, Type)
         VALUES ('${article.ID}', '${article.Title}', '${article.Desc}', '${article.URL}', '${article.Type}');
       `;
         });
 
-        connection.query(query, (err) => {
+        connection.query(createTableQuery, (err) => {
             if (err) {
                 console.error('Error creating table: ' + err.stack);
                 return;
