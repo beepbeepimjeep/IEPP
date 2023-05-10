@@ -1,8 +1,4 @@
 import React from 'react';
-import AboutSerivces from '../components/articles/Article1';
-import Article2 from '../components/articles/Article2';
-import Article3 from '../components/articles/Article3';
-import Article4 from '../components/articles/Article4';
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ArticleCategory.css";

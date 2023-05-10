@@ -2,12 +2,11 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import classes from './aboutServices.module.css';
-const about_1 = require('../../assets/img/about-1.jpg');
-import { Link } from 'react-router-dom';
-import ArticleDetail from '../../pages/ArticleDetail';
 import Button from '@mui/material/Button';
 
-function AboutSerivces({ article = {}}) {
+function AboutSerivces({ article = {}, imageIndex }) {
+ 
+    const imagePath = require(`../../assets/img/about-${imageIndex}.jpg`);
 
     const handleClick = () => {
         window.open(article.URL, "_blank");
@@ -21,7 +20,7 @@ function AboutSerivces({ article = {}}) {
                 <Row className="align-items-center">
                     <Col lg={6} md={12} className="order-lg-2">
                         <div className={`${classes.aboutServicesImg}`}>
-                            <img src={about_1} alt="about-1" />
+                        <img src={imagePath} alt={`about-${imageIndex}`} />
                         </div>
                     </Col>
                     <Col lg={6} md={12}>
