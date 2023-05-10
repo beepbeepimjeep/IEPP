@@ -4,6 +4,8 @@ const fakeNewRouter = require('./routes/fakeNewRouter');
 const chatRouter = require('./routes/chatRouter');
 const articleRouter = require('./routes/articleRouter');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
