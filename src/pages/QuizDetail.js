@@ -17,6 +17,7 @@ const QuizDetail = () => {
   const [answers, setAnswers] = useState([]);
   const [isShow, setIsShow] = useState(true); 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  
 
 
   const handleAnswerChange = (questionId, answerId) => {
@@ -173,7 +174,7 @@ const QuizDetail = () => {
                     <div className="quizOptionsList">
                       {currentQuestion.answers.map((answers) => (
                         // <div key={answers.answerID}>
-                        <div key={answers.answerID}>
+                        <div className="container" key={answers.answerID}>
                           <label>
                             <input
                               // className="pt-3"

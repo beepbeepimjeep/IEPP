@@ -96,6 +96,8 @@ function Header() {
                             <NavLink className="navLink" exact to="/article-category">
                                 Articles
                             </NavLink>
+
+                            
                             {/* <NavLink className="navLink" exact to="/detect-page">
                                 Detect
                             </NavLink> */}

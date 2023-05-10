@@ -37,6 +37,23 @@
     z-index: -2;
 }
 
+.learnMoreButton {
+    background-color: #347336;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .learnMoreButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+
 /* Responsive Start */
 @media screen and (max-width: 1440px) {
 }

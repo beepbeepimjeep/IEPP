@@ -218,7 +218,7 @@ const DetectPage = () => {
                 <p>Result: URL is safe.</p>
               </div>
             ) : (
-              <div className="url-result">
+              <div className="url-result" style={{ color: "black" }}>
                 <div className="result-title">Results:</div>
                 <ul>
                   {urlResult.result &&
@@ -232,7 +232,7 @@ const DetectPage = () => {
 
                     {urlResult.result &&
                       urlResult.result[1] !== null &&
-                      <div className="url-type">
+                      <div className="url-type" >
                         This Website might be - {urlResult.result[1][0].urlType} site
                       </div>
                     }

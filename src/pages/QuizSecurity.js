@@ -152,10 +152,10 @@ const QuizSecurity = () => {
               
 
               <span className="QuizContainer">
-                <p className="QuizTitle">
+                <div className="QuizTitle">
                   {/* 找到与当前进度一样的Quiz */}
                   {currentQuestion.question}
-                </p>
+                </div>
               </span>
               
             </div>

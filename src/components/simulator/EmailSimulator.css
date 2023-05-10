@@ -1,10 +1,10 @@
 /* EmailSimulator.css */
 .email-simulator {
     border: 1px solid #ccc;
-    max-width: 1000px; /* 放大组件 */
-    margin: 50px auto; /* 向下移动组件 */
+    max-width: 1000px; 
+    margin: 50px auto; 
     background-color: #f8f9fa;
-    padding: 20px; /* 增加内边距 */
+    padding: 20px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     line-height: 2;
   }
@@ -16,7 +16,7 @@
   }
   
   .email-list-item {
-    padding: 20px; /* 增加内边距 */
+    padding: 20px; 
     border-bottom: 1px solid #ccc;
     cursor: pointer;
   }
@@ -54,7 +54,6 @@
   .payment-form {
     padding: 20px;
 
-    
   }
   
   .form-group {
@@ -152,7 +151,6 @@
   line-height: 1.5;
 }
 
-
 .alert {
   background-color: #f44336;
   border: none;
@@ -171,7 +169,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .instructions {
   margin-bottom: 30px;
