@@ -15,71 +15,51 @@ const urlSearch = async (domain) => {
     });
     const pattern1 = "http://";
     const pattern2 = "https://";
-    //domain = domain.replace(pattern1, "");
-    //domain = domain.replace(pattern2, "");
     const regex1 = RegExp(pattern1);
     const regex2 = RegExp(pattern2);
-    console.log("domain after replace: "+domain);
-    if((regex1.test(domain)&&domain.length<17)||(regex2.test(domain)&&domain.length<18)||(domain.length<10)){
-        try{
-            const results = await Promise.all([
-                [],
-                [],
-                axios.get(`https://webrisk.googleapis.com/v1/uris:search?threatTypes=MALWARE&uri=${domain}&key=${process.env["GOOGLE_LOOKUP_API"]}`)
-                    .then(response => {
-                        return response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        return [];
-                    })
-            ]);
-            connection.end((err)=>{
-                if(err) throw err;
-                console.log("Line 40, connection pool close")
-            })
+    console.log("domain after replace: " + domain);
+    const url = 'http://34.129.245.42:5000/api/url_check';
+    const data = {
+        url: domain
+    };
+
+    try {
+        const results = await new Promise((resolve, reject) => {
+            connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' LIMIT 5`, (err, results) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
+        });
+
+        connection.end((err) => {
+            if (err) throw err;
+            console.log("Line 74, connection pool close");
+        });
+
+        if (results.length > 0) {
             console.log(results);
             return results;
-        }catch (error) {
-            console.log(error);
-            throw new Error('Internal server error');
+        } else {
+            console.log("Nothing in it");
+            const api = await axios.post(url, data);
+            console.log(api.data.result);
+            const result = [{
+                urlMaliciousId: 1,
+                urlLink: domain,
+                urlType: api.data.result
+            }];
+            console.log(result);
+            return result;
         }
-    }else{
-        try {
-            const results = await Promise.all([
-                new Promise((resolve, reject) => {
-                    connection.query(`SELECT * FROM collectionURL WHERE urlLink LIKE '%${domain}%' `, (err, results) => {
-                        if (err) reject(err);
-                        else resolve(results);
-                    });
-                }),
-                new Promise((resolve, reject) => {
-                    connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' LIMIT 5`, (err, results) => {
-                        if (err) reject(err);
-                        else resolve(results);
-                    });
-                }),
-                axios.get(`https://webrisk.googleapis.com/v1/uris:search?threatTypes=MALWARE&uri=${domain}&key=${process.env["GOOGLE_LOOKUP_API"]}`)
-                    .then(response => {
-                        return response.data;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        return [];
-                    })
-            ]);
-            connection.end((err)=>{
-                if(err) throw err;
-                console.log("Line 74, connection pool close")
-            })
-            console.log(results);
-            return results;
-        } catch (error) {
-            console.log(error);
-            throw new Error('Internal server error');
-        }
+    } catch (error) {
+        console.log(error);
+        throw new Error('Internal server error');
     }
 };
+
 
 module.exports = {
     urlSearch

@@ -10,7 +10,7 @@ const chatFunction = async (message)=>{
             Convenience_vs_risk_ratio: "70 - 30"
         };
 
-        const userMessage = `Please give some customized online security advice based on the following information of the individual in 300 token or less: ${JSON.stringify(messageUser)}`;
+        const userMessage = `Please give some customized online security advice based on the following information of the individual in 300 token or less: ${JSON.stringify(message)}`;
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {
 
             model: 'gpt-3.5-turbo',
