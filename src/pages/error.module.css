@@ -1,0 +1,101 @@
+.errorContent {
+    text-align: center;
+}
+
+.errorTitle {
+    position: relative;
+}
+
+.errorTitle h2 {
+    font-weight: 900;
+    font-size: 248px;
+    line-height: 270px;
+    text-align: center;
+    color: #25282b;
+}
+
+.errorTitle h3 {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #25282b;
+}
+
+.devider {
+    width: 175px;
+    height: 4px;
+    background-color: var(--bs-pink);
+    text-align: center;
+    margin: 50px auto;
+}
+
+.errorContent {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 167%;
+    text-align: center;
+    color: #52575c;
+}
+
+/* Responsive Start */
+@media screen and (max-width: 1440px) {
+    .errorTitle h2 {
+        font-size: 200px;
+        line-height: 230px;
+    }
+
+    .errorTitle h3 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    .devider {
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .errorTitle h2 {
+        font-size: 175px;
+        line-height: 200px;
+    }
+
+    .errorTitle h3 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .errorTitle h2 {
+        font-size: 130px;
+        line-height: 150px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .errorTitle h2 {
+        font-size: 100px;
+        line-height: 120px;
+    }
+
+    .errorTitle h3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .devider {
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .errorTitle h2 {
+        font-size: 92px;
+        line-height: 105px;
+    }
+
+    .errorTitle h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+/* Responsive End */

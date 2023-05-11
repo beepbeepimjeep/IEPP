@@ -18,6 +18,8 @@ import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SimulatorPage from "./pages/SimulatorPage";
 import Oauth from "./pages/Oauth";
+import Error from "./pages/Error";
+import AiSuggest from "./pages/AISuggest";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import font awesome
@@ -87,6 +89,10 @@ function App() {
         title = "Find Issues--TOV";
         metaDescription = "";
         break;
+      case "/AiSuggest":
+        title = "AiSuggest--TOV";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -117,6 +123,8 @@ function App() {
       <Route path="/DetectPageNew" element={<DetectPageNew />} />
       <Route path="/simulator-page" element={<SimulatorPage />} />
       <Route path="/login" element={<Oauth/>}/>
+      <Route path="*" element={<Error />} />
+      <Route path="AiSuggest" element={<AiSuggest />} />
     </Routes>
   );
 }

@@ -7,6 +7,7 @@ import Header from "../components/global/Header";
 import Banner from "../components/global/Banner";
 import Footer from "../components/global/Footer";
 import Hero from "../components/global/Hero";
+// import HeroTwo from "../components/global/HeroTwo";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const HomePage = () => {
         breadcrumb=""
       />
       <Hero />
+      {/* <HeroTwo /> */}
       {/* <div className="buttons">
           <div className="buttons1" onClick={onButtonsContainerClick}>
             <div className="buttonprimary">

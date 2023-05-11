@@ -92,6 +92,9 @@ function Header() {
                             <NavLink className="navLink" exact to="/">
                                 Home
                             </NavLink>
+                            <NavLink className="navLink" exact to="/AiSuggest">
+                                Ai Suggest
+                            </NavLink>
 
                             <NavLink className="navLink" exact to="/article-category">
                                 Articles
