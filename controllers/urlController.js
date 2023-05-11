@@ -22,41 +22,53 @@ const urlSearch = async (domain) => {
     const data = {
         url: domain
     };
-
-    try {
-        const results = await new Promise((resolve, reject) => {
-            connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' LIMIT 5`, (err, results) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(results);
-                }
+    console.log(domain.length);
+    if(domain.length<10){
+        const api = await axios.post(url, data);
+        console.log(api.data.result);
+        const result = [{
+            urlMaliciousId: 1,
+            urlLink: domain,
+            urlType: api.data.result
+        }];
+        console.log(result);
+        return result;
+    }else{
+        try {
+            const results = await new Promise((resolve, reject) => {
+                connection.query(`SELECT * FROM maliciousURL WHERE urlLink LIKE '%${domain}%' LIMIT 1`, (err, results) => {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        resolve(results);
+                    }
+                });
             });
-        });
 
-        connection.end((err) => {
-            if (err) throw err;
-            console.log("Line 74, connection pool close");
-        });
+            connection.end((err) => {
+                if (err) throw err;
+                console.log("Line 74, connection pool close");
+            });
 
-        if (results.length > 0) {
-            console.log(results);
-            return results;
-        } else {
-            console.log("Nothing in it");
-            const api = await axios.post(url, data);
-            console.log(api.data.result);
-            const result = [{
-                urlMaliciousId: 1,
-                urlLink: domain,
-                urlType: api.data.result
-            }];
-            console.log(result);
-            return result;
+            if (results.length > 0) {
+                console.log(results);
+                return results;
+            } else {
+                console.log("Nothing in it");
+                const api = await axios.post(url, data);
+                console.log(api.data.result);
+                const result = [{
+                    urlMaliciousId: 1,
+                    urlLink: domain,
+                    urlType: api.data.result
+                }];
+                console.log(result);
+                return result;
+            }
+        } catch (error) {
+            console.log(error);
+            throw new Error('Internal server error');
         }
-    } catch (error) {
-        console.log(error);
-        throw new Error('Internal server error');
     }
 };
 
