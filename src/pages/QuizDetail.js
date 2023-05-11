@@ -130,10 +130,9 @@
                 
 
                 <span className="QuizContainer">
-                   {/* <div className="QuizTitle">  */}
-                <div className="QuizTitle" dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />       
+                  <div className="QuizTitle"> 
                     {currentQuestion.question}
-                  {/* </div>  */}
+                   </div> 
                 </span>
                 
               </div>

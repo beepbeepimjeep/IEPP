@@ -136,10 +136,10 @@ const QuizSecurity = () => {
               
 
               <span className="QuizContainer">
-              <div className="QuizTitle" dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />       
+              <div className="QuizTitle"> 
                   {/* 找到与当前进度一样的Quiz */}
                   {currentQuestion.question}
-{/*                 </div> */}              
+                  </div> 
               </span>
               
             </div>
