@@ -3,7 +3,7 @@ import QuizSecurity from "../pages/QuizSecurity";
 var QuizSecurityQuestions = [
     {
       questionId:"1",
-      question: "Which of the following is a common way that attackers use to initiate phishing attacks on teenagers?",
+      question: "Which of the following is a common way that attackers use to initiate phishing?",
       answers: 
     [
       {
@@ -36,7 +36,7 @@ var QuizSecurityQuestions = [
     },
     {
       questionId:"2",
-      question: "Which of the following measures can help teenagers protect themselves from phishing attacks?",
+      question: "Which of the following measures can help teenagers protect themselves from phishing?",
       answers: [
         {
           answerID: "1",

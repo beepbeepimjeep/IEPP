@@ -27,9 +27,15 @@
 }
 
 .QuizTitle {
-  margin: 0;
+  margin: 20px;
   font-size: x-large;
+  word-wrap: break-word;
 }
+.QuizTitle span {
+  display: inline;
+}
+
+
 .QuizContainer {
   line-break: anywhere;
   width: 100%;
