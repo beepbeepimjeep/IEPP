@@ -134,6 +134,30 @@
   color: var(--color-darkslategray-100);
   font-family: var(--font-poppins);
 }
+/* Add styles for recommended articles */
+.recommended-article {
+  font-size: 1.1em;
+  margin-top: 1em;
+  text-align: left; /* Add this to align text to the left */
+}
+
+.recommended-article a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s;
+  background-color: #f8f9fa; /* Add this to set a background color */
+  padding: 2px 4px; /* Add this to add some padding around the text */
+  border-radius: 4px; /* Add this to create rounded corners */
+}
+
+.recommended-article a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.recommended-article-title {
+  font-weight: bold;
+}
 
 .resultImage{
   width: 60%;
@@ -225,6 +249,7 @@
   gap: var(--gap-28xl);
   
 }
+
 
 
 

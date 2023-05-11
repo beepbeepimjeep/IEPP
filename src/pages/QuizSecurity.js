@@ -1,23 +1,21 @@
-// import { useCallback } from "react";
-// import { useNavigate } from "react-router-dom";
 import "./QuizDetail.css";
-// import Navbar from "../components/Navbar";
 import Header from "../components/global/Header";
 import QuizSecurityQuestions from "../components/QuizSecurityQuestions";
 import { useState } from "react";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const QuizSecurity = () => {
   const [currentQuizCount, setCurrentQuizCount] = useState(1);
-  // const [CurrentQuizResult, setCurrentQuizResult] = useState("0");
   const [QuizCount, setQuizCount] = useState(1);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [isShow, setIsShow] = useState(true); 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-
+ // 添加一个新的 state 来保存用户未正确回答的问题
+ const [failedQuestions, setFailedQuestions] = useState([]);
 
   const handleAnswerChange = (questionId, answerId) => {
     const newAnswers = [...answers];
@@ -26,10 +24,6 @@ const QuizSecurity = () => {
     setAnswers(newAnswers);
     console.log(newAnswers);
   };
-
-  // const handleAnswerChange = (event) => {
-  //   setSelectedAnswer(event.target.value);
-  // };
 
   
 
@@ -61,11 +55,9 @@ const QuizSecurity = () => {
     if (QuizCount <= QuizSecurityQuestions.length) {
       setQuizCount(QuizCount + 1);
     }
-    
+  
     console.log("当前quiz的答案"+currentQuestion.CorrectAnswer);
-
     console.log("当前选择的答案"+answers[QuizCount - 1]);
-
     console.log("当前得分"+score);
 
     if (answers[QuizCount - 1] === currentQuestion.CorrectAnswer) {
@@ -78,48 +70,40 @@ const QuizSecurity = () => {
       }
     });
 
-    // console.log(currentQuestion.answers.answerID)
-    // if ( currentQuestion.CorrectAnswer === currentQuestion.answers.answerID) {
-    //   setScore(score + 1);
-    // }
+ 
     console.log("next 被调用")
   };
 
-  const handleSubmit = () => {
-    if (answers[QuizCount - 1] === currentQuestion.CorrectAnswer) {
-      setScore(score + 1);
-    }
+     const handleSubmit = () => {
+      if (answers[QuizCount - 1] === currentQuestion.CorrectAnswer) {
+        setScore((prevScore) => prevScore + 1);
+      }
 
-    if (QuizCount === QuizSecurityQuestions.length) {
-      
-      console.log("提交 被调用")
-      console.log("quiz count is "+QuizCount);
+      if (QuizCount === QuizSecurityQuestions.length) {
+        console.log("提交 被调用")
+        console.log("quiz count is "+QuizCount);
+        setIsShow(false)
+        console.log({isShow})
+      }
+      console.log("your scores are: "+score);
 
-      setIsShow(false)
+       // 添加一个新的数组来收集用户错误答案的题目信息
+      let failedQuestionsArray = [];
+      QuizSecurityQuestions.forEach((question, index) => {
+        if (answers[index] !== question.CorrectAnswer) {
+          failedQuestionsArray.push({
+            questionId: question.questionId,
+            url: question.recommendation.url,
+            //description: question.recommendation.description,
+            title: question.recommendation.title,
+          });
+        }
+      });
 
-      console.log({isShow})
-    }
-    console.log("your scores are: "+score);
+      setFailedQuestions(failedQuestionsArray);
+      };
 
-    // preventDefault();
-
-    // if (QuizCount === QuizSecurityQuestions.length) {
-    //   let newScore = score;
-    //   if (answers[QuizCount - 1] === currentQuestion.CorrectAnswer) {
-    //     newScore += 1;
-    //   }
-    //   setScore(newScore);
-    //   console.log("your scores are: " + newScore);
-
-    //   console.log("提交 被调用")
-    //   console.log("quiz count is "+QuizCount);
-
-    //   setIsShow(false)
-
-    //   console.log({isShow})
-    // }
-  };
-
+  
   return (
     <div>
     <Header />
@@ -207,10 +191,6 @@ const QuizSecurity = () => {
                       )}
                     </div>
 
-
-
-
-
                     </div>
                   
         ) : (
@@ -221,33 +201,40 @@ const QuizSecurity = () => {
         
         
         <div className="detailedquiz">
-          {/* <div className="detailedquiz-child" > */}
           <div className="detailedquiz-child" >
             
-          <img className="resultImage" src='https://s1.ax1x.com/2023/04/11/ppOioUs.png'></img>
+          {/* <img className="resultImage" src='https://s1.ax1x.com/2023/04/11/ppOioUs.png'></img> */}
             <div className="resultDetail">
-              {/* <P>Congratulations</P> */}
-              <span>Congratulations<br/>
+           
+              <span>
                 You have completed the quiz<br/>
                 Your results: {score}/{QuizSecurityQuestions.length}
               </span>
-              {/* <h1>Congratulations </h1>
-              <h2>You have completed the quiz</h2><br></br>
-              <h2>Your results: {score}/{QuizSecurityQuestions.length}</h2> */}
 
+              {/* 显示用户未正确回答的问题 */}
+              {failedQuestions.map((failedQuestion) => (
+                  <div key={failedQuestion.questionId} className="recommended-article">
+                    You got question {failedQuestion.questionId} wrong. To learn more, read{" "}
+                    <a
+                      href={failedQuestion.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Click to read the article"
+                    >
+                      <span className="recommended-article-title">
+                        {failedQuestion.title}
+                      </span>
+                    </a>
+                    : {failedQuestion.description}
+                    </div>
+                ))}
             </div>
           </div>
         </div>
         
-        
-        }
-      
-
-      
+        }  
     </div>
-
     </div>
-
 
   );
 };

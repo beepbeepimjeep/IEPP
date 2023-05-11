@@ -14,14 +14,21 @@ var quizQuestions = [
       },
       {
         answerID: "3",
-        content: "Use a combination of uppercase and lowercase letters, numbers, and symbols",
+        content: "  Use a combination of uppercase and lowercase letters, numbers, and symbols",
       },
       {
         answerID: "4",
         content: "Use the same password for multiple accounts",
       }
     ],
-    CorrectAnswer: "3"
+    CorrectAnswer: "3",
+
+    recommendation: {
+      title:
+        "Password Security: A Case Study of Online Habits ",
+      url: "https://www.jstor.org/stable/26296820 ",     
+    },
+
 
   },
   {questionId:"2",
@@ -39,7 +46,18 @@ var quizQuestions = [
         answerID: "3",
         content: "To protect against malware and viruses",
       },
+      {
+        answerID: "4",
+        content: "To improve the speed of your internet connection",
+      },
     ],CorrectAnswer: "2",
+
+    recommendation: {
+      title:
+        "Password Security: A Case Study of Online Habits ",
+      url: "https://www.jstor.org/stable/26296820 ",     
+    },
+
   },
   {questionId:"3",
     question:
@@ -62,6 +80,13 @@ var quizQuestions = [
         content: "Every few months",
       }
     ],CorrectAnswer: "4",
+
+    recommendation: {
+      title:
+        "Teens, Social Media & Technology Overview 2015 ",
+      url: "https://www.pewresearch.org/internet/2015/04/09/teens-social-media-technology-2015/ ",     
+    },
+
   },
   {questionId:"4",
     question: "What is two-factor authentication?",
@@ -78,8 +103,20 @@ var quizQuestions = [
         answerID: "3",
         content: "A way to encrypt your password and personal data",
       },
+      {
+        answerID: "4",
+        content: "A way to create a backup password in case you forget your primary password ",
+      },
     ],CorrectAnswer: "1",
+
+    recommendation: {
+      title:
+        "Teens, Social Media & Technology Overview 2015 ",
+      url: "https://www.pewresearch.org/internet/2015/04/09/teens-social-media-technology-2015/ ",     
+    },
+
   },
+
   {questionId:"5",
     question: "What should you do if you suspect that your password has been compromised?",
     answers: [
@@ -100,6 +137,42 @@ var quizQuestions = [
       }
     ],
     CorrectAnswer: "2",
+
+    recommendation: {
+      title:
+        "Two studies of the perceptions of risk, benefits and likelihood of undertaking password management behaviours",
+      url: "https://www.tandfonline.com/doi/full/10.1080/0144929X.2021.2019832      ",     
+    },
+
+  },
+
+  {questionId:"6",
+    question: "What is the main reason that teenagers reuse passwords?",
+    answers: [
+      {
+        answerID: "1",
+        content: "They think it's more secure",
+      },
+      {
+        answerID: "2",
+        content: "They have trouble remembering multiple passwords",
+      },
+      {
+        answerID: "3",
+        content: "They don't know how to create strong passwords",
+      },{
+        answerID: "4",
+        content: "They don't think password security is important",
+      }
+    ],
+    CorrectAnswer: "2",
+
+    recommendation: {
+      title:
+        "Two studies of the perceptions of risk, benefits and likelihood of undertaking password management behaviours",
+      url: "https://www.tandfonline.com/doi/full/10.1080/0144929X.2021.2019832      ",     
+    },
+
   },
 ];
 

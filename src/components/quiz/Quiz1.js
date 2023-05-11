@@ -1,7 +1,5 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-/* import { about_1, heroCircle } from '../../assets/img'; */
 import classes from './aboutServices.module.css';
 const quiz_1 = require('../../assets/img/quiz-1.jpg');
 import { Link } from 'react-router-dom';
