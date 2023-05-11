@@ -14,7 +14,7 @@ const SimulatorPage = () => {
     <>
       <Header />
       <Banner 
-        pageTitle="Test How Much You Know About Internet Fraud"
+        pageTitle="Test What Will Happen If You Click on a Malicious Link"
         smTitle="Simulator"
         breadcrumb="Home / Simulator"
       />
