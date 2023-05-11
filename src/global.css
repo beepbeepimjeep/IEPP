@@ -492,14 +492,16 @@ Typography End
 }
 
 .form-check-input:checked {
-  background-color: var(--bs-pink);
-  border-color: var(--bs-pink);
+  /* background-color: var(--bs-pink);
+  border-color: var(--bs-pink); */
+  background-color: var(--color-mediumseagreen-100) ;
+  border-color: var(--color-mediumseagreen-100) ;
 }
 
 .form-check-input {
   width: 45px !important;
   height: 22px;
-  border-color: var(--bs-pink) !important;
+  border-color: var(--color-mediumseagreen-100)  !important;
 }
 
 .form-check-input:focus {

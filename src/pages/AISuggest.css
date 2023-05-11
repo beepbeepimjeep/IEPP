@@ -54,3 +54,8 @@
   font-size: medium;
   font-weight: bolder;
 }
+
+.form-check-input:checked {
+  background-color: var(--color-mediumseagreen-100) ;
+  border-color: var(--color-mediumseagreen-100) ;
+}
