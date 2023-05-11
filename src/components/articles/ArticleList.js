@@ -68,9 +68,15 @@ const ArticleList = () => {
       </FormControl>
       </Box>
 
-      {articles.map(article => (
+     {/*  {articles.map(article => (
         <AboutSerivces key={article.Id} article={article} />
-      ))}
+      ))} */}
+      
+    {articles.map((article, index) => (
+        <AboutSerivces key={article.Id} article={article} imageIndex={index % 4 + 1} /> 
+    ))}
+
+      
     </div>
   );
 };
