@@ -105,7 +105,7 @@ var quizQuestions = [
       },
       {
         answerID: "4",
-        content: "A way to create a backup password in case you forget your primary password ",
+        content: "A way to create a backup password in case you forget ",
       },
     ],CorrectAnswer: "1",
 

@@ -98,8 +98,8 @@
 
 .next,
 .nextbutton {
-    left: 50vw;
-    top: 60vh;
+    left: 60vw;
+    top: 70vh;
     width: 200px;
     cursor: pointer;
 }
@@ -144,7 +144,18 @@
 .recommended-article {
   font-size: 1.1em;
   margin-top: 1em;
-  text-align: left; /* Add this to align text to the left */
+  text-align: left; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s;
+  background-color: #fff9db; /* Change the color to a very light yellow */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1); /* Add some shadow */
+
+}
+.recommended-article:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2); /* Increase shadow when mouse hovers */
 }
 
 .recommended-article a {
@@ -163,8 +174,9 @@
 
 .recommended-article-title {
   font-weight: bold;
+  display: block; /* Add this to create a new line */
+  margin-bottom: 10px; /* Add this to create some space */
 }
-
 .resultImage{
   width: 60%;
   height: 60%;

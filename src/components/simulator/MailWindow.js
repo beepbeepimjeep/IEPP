@@ -28,11 +28,14 @@ function EmailSimulator() {
     setStage(1);
   };
 
-  const openEmail = () => {
+  const openEmail = (e) => {
+    e.preventDefault();
     setStage(2);
   };
 
-  const submitPayment = () => {
+
+  const submitPayment = (e) => {
+    e.preventDefault();
     if (cardNumber && cw) {
       setStage(4);
     } else {
@@ -44,7 +47,7 @@ function EmailSimulator() {
     e.preventDefault();
     setStage(3);
   };
-
+  
   const goBack = () => {
     if (stage > 0) {
       setStage(stage - 1);

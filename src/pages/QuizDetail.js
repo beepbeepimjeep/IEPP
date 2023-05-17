@@ -218,7 +218,6 @@
                         {failedQuestion.title}
                       </span>
                     </a>
-                    : {failedQuestion.description}
                     </div>
                 ))}
             </div>
