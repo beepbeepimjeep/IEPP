@@ -177,7 +177,7 @@ const QuizSecurity = () => {
                         </div>
                       ))}
 
-                      {/* <p>Your score: {score}</p> */}
+                
                     </div> 
                     <div className="submitbutton" />
                     <div className="nextbutton" />
@@ -225,7 +225,7 @@ const QuizSecurity = () => {
                         {failedQuestion.title}
                       </span>
                     </a>
-                    : {failedQuestion.description}
+                     {failedQuestion.description}
                     </div>
                 ))}
             </div>
