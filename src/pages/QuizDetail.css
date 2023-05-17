@@ -1,21 +1,30 @@
-.quizCount {
+/* .quizCount {
   position: absolute;
   top: 15%;
   left: 45vw;
-  /* left: 925px; */
   font-size: 31px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 378px; */
   width: 20vw;
   height: 76px;
-}
-.detailedquiz-child {
+} */
+.quizCount {
   position: absolute;
-  /* top: 50%; */
-  /* left: 0; */
+  top: 15vh;
+  left: 45vw;
+  font-size: 3vw;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 7vh;
+}
+
+/* .detailedquiz-child {
+  position: absolute;
   border-radius: 13px;
   background-color: #f5f5f5;
   width: 1229px;
@@ -24,13 +33,26 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+
+.detailedquiz-child {
+  position: absolute;
+  border-radius: 1vw;
+  background-color: #f5f5f5;
+  width: 80vw;
+  height: 72vh;
+  font-family: var(--font-poppins);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .QuizTitle {
-  margin: 20px;
+  margin: 2vw;
   font-size: x-large;
   word-wrap: break-word;
 }
+
 .QuizTitle span {
   display: inline;
 }
@@ -41,24 +63,18 @@
   width: 100%;
 }
 .QuizContainer {
-  /* position: absolute;
-  top: 160px;
-  left: 102px;
-  font-size: var(--font-size-17xl);
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  width: 1002px;
-  height: 174px; */
+  
   position: absolute;
-    top: 160px;
+    /* top: 160px; */
+    top: 16vh;
     left: 10vw;
     font-size: var(--font-size-17xl);
     font-weight: 800;
     display: flex;
     align-items: center;
     width: 80vw;
-    height: 174px;
+    height: 17vh;
+    /* height: 174px; */
 }
 
 
@@ -97,12 +113,23 @@
 }
 
 .next,
-.nextbutton {
+/* .nextbutton {
     left: 60vw;
     top: 70vh;
     width: 200px;
     cursor: pointer;
+} */
+.nextbutton {
+  position: absolute;
+  top: 90vh; /* 将按钮放置在视口的底部 */
+  left: 50%; /* 将按钮居中 */
+  transform: translateX(-50%); /* 确保左边是按钮的中心 */
+  width: 60vw; /* 使按钮的宽度相对于视口的宽度 */
+  height: 6vh; /* 使按钮的高度相对于视口的高度 */
+  font-size: 2vw; /* 使字体大小相对于视口的宽度 */
+  cursor: pointer;
 }
+
 .nextbutton {
   border-radius: var(--br-3xs);
   background-color: var(--color-orange);
@@ -226,10 +253,14 @@
 
 @media screen and (max-width: 800px) and (max-height: 896px) {
   .next, .nextbutton {
-    left: 33vw;
+   /*  left: 33vw;
     top: 78vh;
-    width: 200px;
-    cursor: pointer;
+    width: 40vw;
+    cursor: pointer; */
+    top: 85vh; /* 在小屏幕上将按钮向上移动一点 */
+    width: 80vw; /* 在小屏幕上使按钮更宽 */
+    height: 10vh; /* 在小屏幕上使按钮更高 */
+    font-size: 3vw; /* 在小屏幕上使字体更大 */
 }
 
 .detailedquiz-child {
