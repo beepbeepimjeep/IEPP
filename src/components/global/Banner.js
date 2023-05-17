@@ -8,7 +8,7 @@ import  bannerBg  from '../../assets/img/Homepage.jpg';
 import classes from './banner.module.css';
 
 function Banner(props) {
-    const { pageTitle, smTitle, breadcrumb } = props;
+    const { pageTitle, smTitle, breadcrumb, PageMore } = props;
     return (
         <div
             className={`${classes.topBanner}`}
@@ -27,6 +27,7 @@ function Banner(props) {
                         <div className={classes.bannerTitle}>
                             <span className="shape">{smTitle}</span>
                             <h2>{pageTitle}</h2>
+                            <p className={classes.pageMore}>{PageMore}</p>
                         </div>
                     </Col>
                 </Row>

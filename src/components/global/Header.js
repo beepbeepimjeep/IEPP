@@ -92,8 +92,11 @@ function Header() {
                             <NavLink className="navLink" exact to="/">
                                 Home
                             </NavLink>
+                            <NavLink className="navLink" exact to="/DetectPageNew">
+                                Detect
+                            </NavLink>
                             <NavLink className="navLink" exact to="/AiSuggest">
-                                Ai Suggest
+                                AI Suggest
                             </NavLink>
 
                             <NavLink className="navLink" exact to="/article-category">
@@ -104,9 +107,9 @@ function Header() {
                             {/* <NavLink className="navLink" exact to="/detect-page">
                                 Detect
                             </NavLink> */}
-                            <NavLink className="navLink" exact to="/DetectPageNew">
+                            {/* <NavLink className="navLink" exact to="/DetectPageNew">
                                 Detect
-                            </NavLink>
+                            </NavLink> */}
                             <NavLink className="navLink" exact to="/simulator-page">
                                 Simulator
                             </NavLink>

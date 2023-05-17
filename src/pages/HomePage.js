@@ -36,6 +36,7 @@ const HomePage = () => {
         pageTitle="Find Potential Fraud"
         smTitle="Trust online Victoria"
         breadcrumb=""
+        PageMore="We aim to help Victorian teenagers protect their online privacy"
       />
       <Hero />
       {/* <HeroTwo /> */}

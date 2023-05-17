@@ -59,6 +59,7 @@ function PasswordCheck() {
           <h3 >Password Strength Checker</h3>
         </div>
 
+        <p className="p-5">Enter a password you are currently using and we will calculate its strength and give suggestions. </p>
         <div className="card-body-psw">
           <div className="input-container">
             <div className="input-box">

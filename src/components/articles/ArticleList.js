@@ -20,7 +20,7 @@ const ArticleList = () => {
   useEffect(() => {
     if (type) {
       // 根据选择的类型获取文章数据
-      axios.get(`http://localhost:3080/getArticle?type=${type}`)
+      axios.get(`https://api.trustonlinevictoria.com/getArticle?type=${type}`)
         .then(response => {
           // 检查收到的数据是否为数组
           if (Array.isArray(response.data.articles)) {

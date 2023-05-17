@@ -63,6 +63,9 @@
 .breadcrumbItem + .breadcrumbItem::before {
     color: #fff;
 }
+.pageMore{
+    color: #fff;
+}
 
 /* Responsive Start */
 @media screen and (max-width: 1440px) {

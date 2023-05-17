@@ -7,10 +7,11 @@ import Banner from "../components/global/Banner";
 // copy from previous
 import { useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
+import React, { useEffect } from "react";
 import { searchURL, searchArticle } from "../service/urlService";
 import PasswordCheck from "../components/PasswordCheck";
 
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 
 const DetectPageNew = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -40,13 +41,11 @@ const DetectPageNew = () => {
             <Card className="cardStyle">
               <Card.Body>
                 <Card.Title>Detect URL</Card.Title>
-
-                {/* <Card.Text>
-                  This is the content for Detect URL tab.
-                </Card.Text> */}
+                
                 <div className="title-text1">
                   <h3 className="">Detect the URL of website</h3>
-
+                  <p>Copy and paste in a suspicious URL and we will detect it using machine learning. We will tell you if it is a good / bad site to visit. 
+( Expected 80% accuracy ) </p>
                   <div className="inputsearch">
                     <div className="inputsearch-child" />
                     <div className="label-parent">
@@ -75,15 +74,14 @@ const DetectPageNew = () => {
                           <i className="label3">Detect</i>
                         </div>
                       </div>
-
-                      
                     </div>
                   </div>
                   {isLoading ? <div className="spinner"></div> : null}
 
                   {urlError && <div className="error-message"> url error</div>}
 
-                  {urlResult === null ? (
+                  {/* 请修改这里 */}
+                  {/* {urlResult === null ? (
                     <div></div>
                   ) : urlResult.result[0].length == 0 &&
                     urlResult.result[1].length == 0 &&
@@ -96,13 +94,7 @@ const DetectPageNew = () => {
                     <div className="url-result">
                       <div className="result-title">Results:</div>
                       <ul>
-                        {/* {urlResult.result &&
-                          urlResult.result[0] &&
-                          urlResult.result[0].map((item, index) => (
-                            <li className="result-item" key={index}>
-                              {item}
-                            </li>
-                          ))} */}
+                      
 
                         {urlResult.result && urlResult.result[1] !== null && (
                           <div className="url-type" style={{ color: "black" }}>
@@ -121,7 +113,29 @@ const DetectPageNew = () => {
                           ))}
                       </ul>
                     </div>
-                  )}
+                  )} */}
+
+                  {/* {urlResult === null ? "urlresult is null" : (
+                    <div>
+                      <p>urlresult is not null</p>
+                    </div>
+                  )
+                  } */}
+
+{urlResult && urlResult.result ? (
+  <div>
+    {urlResult.result.map((item) => (
+      <div key={item.urlMaliciousId}>
+        <p>URL: {item.urlLink}</p>
+        <p>This url is a :" {item.urlType} " site</p>
+      </div>
+    ))}
+  </div>
+) : (
+  <div>No results found</div>
+)}
+
+                  {/* 结束修改 */}
                 </div>
               </Card.Body>
             </Card>
@@ -137,6 +151,9 @@ const DetectPageNew = () => {
                 <Card.Title>Detect Article</Card.Title>
                 <div className="title-text1">
                   <h3 className="">Fact Check</h3>
+                  <p>Enter news keyword and we will match it against existing online claims, and verify its truthfulness.<br></br>
+( Eg. Climate change is not real ) 
+</p>
                   <div className="inputsearch">
                     <div className="inputsearch-child" />
                     <div className="label-parent">
@@ -152,7 +169,10 @@ const DetectPageNew = () => {
                           }
                         }}
                       />
-                      <div className="buttonsecondary1" onClick={handleArticleSubmit}>
+                      <div
+                        className="buttonsecondary1"
+                        onClick={handleArticleSubmit}
+                      >
                         <div
                           className="iconlybulksend-parent"
                           // onClick={handleArticleSubmit}
@@ -173,59 +193,6 @@ const DetectPageNew = () => {
                     <div className="error-message"> Article error</div>
                   )}
 
-                  {/* {urlResult === null ? (
-                    <div></div>
-                  ) : urlResult.result[0].length == 0 &&
-                    urlResult.result[1].length == 0 &&
-                    Object.keys(urlResult.result[2]).length === 0 ? (
-                    <div className="url-result">
-                      <div className="result-title"></div>
-                      <p>Result: URL is safe.</p>
-                    </div>
-                  ) : (
-                    <div className="url-result">
-                      <div className="result-title">Results:</div>
-                      <ul>
-                        {urlResult.result &&
-                          urlResult.result[0] &&
-                          urlResult.result[0].map((item, index) => (
-                            <li className="result-item" key={index}>
-                              {item}
-                            </li>
-                          ))}
-
-                        {urlResult.result && urlResult.result[1] !== null && (
-                          <div className="url-type">
-                            This Website might be -{" "}
-                            {urlResult.result[1][0].urlType} site
-                          </div>
-                        )}
-
-                        {urlResult.result &&
-                          urlResult.result[2] &&
-                          urlResult.result[2].matches &&
-                          urlResult.result[2].matches.map((item, index) => (
-                            <li className="result-item" key={index}>
-                              {item.threatType}
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  )} */}
-
-                  {/* <div className="url-result">
-                    <div className="result-title">Results:</div>
-                    <ul>
-                      {articleResult.result &&
-                        articleResult.result[0] &&
-                        articleResult.result[0].map((item, index) => (
-                          <li className="result-item" key={index}>
-                            {item}
-                          </li>
-                        ))}
-                    </ul>
-                  </div> */}
-
                   <div className="showResult">
                     {articleResult && articleResult.emptyResult && (
                       <p>Your claim did not match any result</p>
@@ -240,35 +207,25 @@ const DetectPageNew = () => {
                             <br />
                             <strong>Result:</strong> {item.result}
                             <br />
-                            {/* <strong>URL:</strong> {item.url} */}
-
-                            {/* <Button variant="secondary" size="sm" href={item.url}>
-                            Access
-                          </Button> */}
-
-                          {item.url?
-                            (<div><Button variant="secondary" size="sm" href={item.url} target="_blank">
-                            Access
-                          </Button>
-                          
-                          </div>  ): <br></br>
-                          
-                          }
-
-                          {/* <Button variant="secondary" size="sm" href={item.url} target="_blank">
-                            Access
-                          </Button> */}
-
+                            {item.url ? (
+                              <div>
+                                <Button
+                                  variant="secondary"
+                                  size="sm"
+                                  href={item.url}
+                                  target="_blank"
+                                >
+                                  Access
+                                </Button>
+                              </div>
+                            ) : (
+                              <br></br>
+                            )}
                           </li>
                         ))}
                       </ul>
-                    ) : (
-                      // <p>No results found</p>
-                      null
-                    )}
+                    ) : null}
                   </div>
-
-
                 </div>
               </Card.Body>
             </Card>
@@ -288,16 +245,6 @@ const DetectPageNew = () => {
         return null;
     }
   };
-
-  // copy from previous
-  // const [urlInput, setUrlInput] = useState("");
-  // const [passwordInput, setPasswordInput] = useState("");
-  // const [urlError, setUrlError] = useState("");
-  // const navigate = useNavigate();
-  // const [showpassword, setShowpassword] = useState(false);
-
-  // const [urlResult, setUrlResult] = useState(null); //保存返回的数据
-  // const [isLoading, setIsLoading] = useState(false); // 新增 isLoading 状态
 
   const onHomeTextClick = useCallback(() => {
     navigate("/");
@@ -340,6 +287,7 @@ const DetectPageNew = () => {
         const result = await searchURL(urlInput);
         console.log(result);
         setUrlResult(result);
+        console.log(urlResult);
       } catch (error) {
         console.error(error);
       } finally {
@@ -350,43 +298,16 @@ const DetectPageNew = () => {
     setUrlInput("");
     setUrlError("");
   };
-  // handle artcile submit
-  // const handleArticleSubmit = async () => {
-  //   console.log("Submitted Keywords:", articleInput);
-  //   const articleResult = await searchArticle(articleInput);
-  //   console.log("Article result is ", articleResult);
-  //   // console.log(articleResult);
-  //   setArticleResult(articleResult);
-  //   // console.log("Article result is "+ articleResult);
 
-  //   if (articleInput === "") {
-  //     window.confirm("Please enter your keywords/ Article Title");
-  //     return;
-  //   } else {
-  //     setIsLoading(true); // 设置为正在加载状态
-  //     try {
-  //       // const articleResult = await searchArticle(articleInput);
-  //       // console.log(articleResult);
-  //       // // searchArticle(result);
-  //       // setArticleResult(articleResult);
-  //       console.log("Submitted Keywords:", articleInput);
-  //       const articleResult = await searchArticle(articleInput);
-  //       console.log("Article result is ", articleResult);
-  //       // console.log(articleResult);
-  //       setArticleResult(articleResult);
-  //     } catch (error) {
-  //       console.error(error);
-  //     } finally {
-  //       setIsLoading(false); // 加载完成后设置为非加载状态
-  //     }
-  //   }
-  //   // Send URL to backend
-  //   setArticleInput("");
-  //   setArticleError("");
-  // };
+  useEffect(() => {
+    console.log(urlResult);
+  }, [urlResult]);
+
   const handleArticleSubmit = async () => {
     if (articleInput === "") {
-      const confirmed = window.confirm("Please enter your keywords/ Article Title");
+      const confirmed = window.confirm(
+        "Please enter your keywords/ Article Title"
+      );
       if (!confirmed) {
         return; // 用户点击了“取消”按钮，停止执行后续的代码
       }
@@ -424,7 +345,6 @@ const DetectPageNew = () => {
         smTitle="Tools"
         breadcrumb="Home / Detect"
       />
-      
 
       <Container className="mt-3">
         <Nav

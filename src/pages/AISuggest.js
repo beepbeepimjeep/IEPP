@@ -12,6 +12,7 @@ const AiSuggest = () => {
   const [convenienceSecurityRatio, setConvenienceSecurityRatio] = useState(50);
   const [result, setResult] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false); // 新增 isLoading 状态
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,23 +33,29 @@ const AiSuggest = () => {
       return;
     }
     try {
+      setIsLoading(true); // 设置为正在加载状态
       const response = await fetch("https://api.trustonlinevictoria.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          "Device": deviceType,
-          "Common_online activity": onlineActivities,
-          "User_base_knowledge": knowledgeLevel,
-          "Risk tolerance": riskTolerance,
-          "Convenience vs risk ratio":convenienceSecurityRatio,
+          "message": {
+            "Device": deviceType,
+            "Common_online activity": onlineActivities,
+            "User_base_knowledge": knowledgeLevel,
+            "Risk tolerance": riskTolerance,
+            "Convenience vs risk ratio":convenienceSecurityRatio,
+          }
         }),
       });
       const data = await response.json();
       setResult(data.response);
+      
     } catch (error) {
       console.error(error);
+    }finally {
+      setIsLoading(false); // 加载完成后设置为非加载状态
     }
   };
  
@@ -59,8 +66,8 @@ const AiSuggest = () => {
       <Container>
         <div className="FormBackground">
           <Form onSubmit={handleSubmit}>
-            <h3>Get your personal suggestion with AI</h3> <br></br>
-
+            <h3>Get your personal suggestion from AI</h3> <br></br>
+            <p>Match your selection closest to your current situation to get a customized result</p>
             <Form.Group className="mb-3">
               <Form.Label>Select the type of mobile device:</Form.Label>
               <Row>
@@ -309,6 +316,7 @@ const AiSuggest = () => {
             </Button>
           </Form>
 
+          {isLoading ? <div className="spinner"></div> : null}
           {result && (
             <div className="result-box">
               <h5>Result:</h5>
