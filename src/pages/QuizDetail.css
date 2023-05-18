@@ -120,7 +120,7 @@
     cursor: pointer;
 } */
 .nextbutton {
-  position: absolute;
+  position: fixed;
   top: 90vh; /* 将按钮放置在视口的底部 */
   left: 50%; /* 将按钮居中 */
   transform: translateX(-50%); /* 确保左边是按钮的中心 */
@@ -259,7 +259,7 @@
     cursor: pointer; */
     top: 85vh; /* 在小屏幕上将按钮向上移动一点 */
     width: 80vw; /* 在小屏幕上使按钮更宽 */
-    height: 10vh; /* 在小屏幕上使按钮更高 */
+    height: 5vh; /* 在小屏幕上使按钮更高 */
     font-size: 3vw; /* 在小屏幕上使字体更大 */
 }
 
@@ -297,6 +297,18 @@
   height: 32px;
   gap: var(--gap-28xl);
   
+}
+.quizCount {
+  position: absolute;
+  top: 10vh;
+  left: 45vw;
+  font-size: 4vw;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 7vh;
 }
 
 
