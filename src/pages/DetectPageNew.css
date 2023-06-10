@@ -136,7 +136,8 @@
 @media (max-width: 767px) {
     /* 在这里写需要适配移动设备的样�*/
     .card {
-        height: 350px;
+        height: 420px;
+        /* height: 350px; */
         position: absolute;
         top: 24%;
         left: 3%;

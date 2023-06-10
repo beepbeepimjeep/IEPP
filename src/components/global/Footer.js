@@ -88,26 +88,36 @@ function Footer() {
                                 </ul>
                             </Col>
                             <Col lg={4} md={6} sm={6}>
-                                <h4 className={`${classes.footerLinkTitle}`}>Contact</h4>
+                                <h4 className={`${classes.footerLinkTitle}`}>Team TP-04</h4>
                                 <ul className={`${classes.footerLinkCollections}`}>
                                     <li>
-                                        <span>
+                                        {/* <span>
                                             <HiOutlineLocationMarker />
-                                        </span>
-                                        437 Melborne Ave #4, NY 13253, Australia
+                                        </span> */}
+                                        {/* ZhanBo Liu */}
                                     </li>
                                     <li>
-                                        <span>
+                                        {/* <span>
                                             <BsPhone />
-                                        </span>
-                                        +61 3 9902 XXXX
+                                        </span> */}
+                                        {/* Zhang yu */}
+                                    </li>
+                                    {/* <li>
+                                        Luling Zhang
                                     </li>
                                     <li>
+                                        ZiHeng Tang
+                                    </li>
+                                    <li>
+                                    Chongcheng Yue
+                                    </li> */}
+
+                                    {/* <li>
                                         <span>
                                             <MdAlternateEmail />
                                         </span>
                                         Hello@TrustOnlineVictoria.com
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </Col>
                         </Row>
